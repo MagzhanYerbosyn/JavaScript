@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./js/index.js"></script>
+    <title>Sepsize</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header__inner">
+        <!-- LOGO -->
+        <div class="header__inner-logo">
+          <img src="./img/logo.png" alt="logotype" />
+        </div>
+        <!-- LOGO -->
+
+        <!-- TITLE -->
+        <div class="header__inner-title">
+          <h2>SepSize</h2>
+          <h3></h3>
+        </div>
+        <!-- TITLE -->
+
+        <!-- SCHEMATIC -->
+        <div class="header__inner-schematic">
+          <div class="schematic-title"><span>Schematic</span></div>
+          <div class="schematic-pic">
+            <img src="./img/schematic_pic.png" alt="schematic picture" />
+          </div>
+        </div>
+        <!-- SCHEMATIC -->
+      </div>
+    </header>
+    <!-- HEADER -->
+
+    <!-- MAIN -->
+    <main>
+      <section class="inputs">
+        <div class="inputs__inner">
+          <!-- INPUT HEAD -->
+          <div class="inputs__inner-head">
+            <div class="title"><h2>Module 1 -Operating Inputs</h2></div>
+            <div class="paragraphs">
+              <p class="paragraph">Define operating conditions, flow rates and fluid properties</p>
+              <p class="paragraph">Units: psia, F, bbl/day, MMSCFD</p>
+            </div>
+          </div>
+          <!-- INPUT HEAD -->
+        </div>
+
+        <!-- INPUTS CONTENT -->
+        <div class="inputs__inner-content">
+          <div class="content-list">
+            <div class="content-list__item">
+              <span>Pressure (psia)</span>
+              <input type="text" />
+            </div>
+
+            <div class="content-list__item">
+              <span>Temperature (R)</span>
+              <input type="text" />
+            </div>
+
+            <div class="content-list__item">
+              <span>Standard Pressure (psia)</span>
+              <input type="text" />
+            </div>
+
+            <div class="content-list__item">
+              <span>Standard Tempeature (R)</span>
+              <input type="text" />
+            </div>
+          </div>
+
+          <p class="paragraph">Flow Rates & Fluid Properties</p>
+
+          <div class="content-list">
+            <div class="content-list__item">
+              <span>Total Flow Rate (bbl/day)</span>
+              <input type="text" />
+            </div>
+
+            <div class="content-list__item">
+              <span>Water Flow Rate (bbl/day)</span>
+              <input type="text" />
+            </div>
+
+            <div class="content-list__item">
+              <span>Gas Flow Rate (MMSCFD)</span>
+              <input type="text" />
+            </div>
+
+            <div class="content-list__item">
+              <span>Oil Flow Rate (bbl/day)</span>
+              <input type="text" />
+            </div>
+          </div>
+
+          <p class="paragraph">Properties</p>
+
+          <div class="content-list">
+            <div class="content-list__item">
+              <span>GOR (scf/STB)</span>
+              <input type="text" />
+            </div>
+
+            <div class="content-list__item">
+              <span>API</span>
+              <input type="text" />
+            </div>
+
+            <div class="content-list__item">
+              <span>Oil Density (lb/ft*3)</span>
+              <input type="text" />
+            </div>
+
+            <div class="content-list__item">
+              <span>Droplet Size Removal (microns)</span>
+              <input type="text" />
+            </div>
+
+            <div class="content-list__item">
+              <span>Surface Tension (lb/ft)</span>
+              <input type="text" />
+            </div>
+
+            <div class="content-list__item">
+              <span>Water Cut (%)</span>
+              <input type="text" />
+            </div>
+          </div>
+
+          <div class="action-btn">
+            <input type="button" value="Accept Data" />
+          </div>
+        </div>
+        <!-- INPUTS CONTENT -->
+      </section>
+    </main>
+    <!-- MAIN -->
+
+    <!-- FOOTER -->
+    <footer></footer>
+    <!-- FOOTER -->
+  </body>
+</html>
