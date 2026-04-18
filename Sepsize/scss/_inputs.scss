@@ -1,0 +1,64 @@
+@use 'abstracts' as *;
+
+.inputs {
+  height: 633px;
+  background-color: $section-bg;
+  margin: 30px 0;
+
+  &__inner {
+    padding: 22px 38px;
+    color: $white;
+
+    @include flex(space-between, flex-start, column);
+
+    &-head {
+      width: 100%;
+      .title {
+        h2 {
+          font-size: 18px;
+        }
+      }
+
+      .paragraphs {
+        width: 100%;
+        @include flex(space-between);
+
+        .paragraph {
+          font-size: 14px;
+          color: $paragraph;
+        }
+      }
+    }
+
+    &-content {
+      color: $paragraph;
+
+      .content-list {
+        font-size: 14px;
+        margin: 24px 0;
+
+        @include flex();
+        flex-wrap: wrap;
+
+        &__item {
+          margin-right: 25px;
+          @include flex(flex-start, flex-start, column);
+
+          input {
+            @extend %input_value;
+          }
+        }
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+    &-btn {
+      input {
+        @extend %button;
+      }
+    }
+  }
+}
