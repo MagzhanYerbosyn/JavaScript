@@ -9,4 +9,54 @@
 .container {
   width: 1200px;
   margin: 0 auto;
+}
+
+.header {
+  background-color: #1a2b3c;
+}
+.header__inner {
+  color: #ffffff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.header__inner-title h2 {
+  font-size: 20px;
+}
+.header__inner-title h3 {
+  font-size: 12px;
+}
+.header__inner-schematic {
+  width: 182px;
+  height: 66px;
+  border: 1px solid #2b3b4b;
+  border-radius: 10px;
+  padding: 9px 13px;
+  margin-left: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.header__inner-schematic .schematic-title {
+  margin-left: 13px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.header__inner-schematic .schematic-title span {
+  font-size: 12px;
+}
+.header__inner-schematic .schematic-pic {
+  width: 70px;
+  height: 48px;
+}
+
+main {
+  background-color: #0f1720;
 }/*# sourceMappingURL=style.css.map */

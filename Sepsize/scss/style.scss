@@ -1,2 +1,6 @@
-@use 'abstracts';
+@use 'abstracts' as *;
 @use 'header';
+
+main {
+  background-color: $main-bg;
+}

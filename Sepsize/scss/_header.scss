@@ -1,1 +1,44 @@
-@use 'abstracts';
+@use 'abstracts' as *;
+
+.header {
+  background-color: $header-bg;
+
+  &__inner {
+    color: $white;
+    @include flex(flex-start, center);
+
+    &-title {
+      h2 {
+        font-size: 20px;
+      }
+      h3 {
+        font-size: 12px;
+      }
+    }
+
+    &-schematic {
+      width: 182px;
+      height: 66px;
+      border: $header-border;
+      border-radius: 10px;
+      padding: 9px 13px;
+      margin-left: 55px;
+
+      @include flex(space-between, center);
+
+      .schematic-title {
+        margin-left: 13px;
+
+        @include flex(flex-start, center);
+        span {
+          font-size: 12px;
+        }
+      }
+
+      .schematic-pic {
+        width: 70px;
+        height: 48px;
+      }
+    }
+  }
+}
