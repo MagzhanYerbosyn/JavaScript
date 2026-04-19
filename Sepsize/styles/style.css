@@ -37,6 +37,7 @@ ul {
   font-weight: bold;
   color: #ffffff;
   background-color: #ffb84d;
+  border: 1px solid #294155;
   border-radius: 40px;
   cursor: pointer;
 }
@@ -143,6 +144,14 @@ ul {
 .inputs__inner-content p {
   font-size: 14px;
 }
+.inputs__inner-btn input:hover {
+  font-size: 19px;
+  opacity: 0.8;
+}
+.inputs__inner-btn input:active {
+  opacity: 1.2;
+}
+
 .flash {
   margin-top: 30px;
   background-color: #0e1a26;
@@ -237,6 +246,14 @@ ul {
 .flash__inner-content .table__foot .card p {
   font-size: 12px;
 }
+.flash__inner-btn input:hover {
+  font-size: 19px;
+  opacity: 0.8;
+}
+.flash__inner-btn input:active {
+  opacity: 1.2;
+}
+
 .factor {
   margin-top: 30px;
   background-color: #0e1a26;
@@ -296,6 +313,14 @@ ul {
 .factor__inner-content .card p {
   font-size: 12px;
 }
+.factor__inner-btn input:hover {
+  font-size: 19px;
+  opacity: 0.8;
+}
+.factor__inner-btn input:active {
+  opacity: 1.2;
+}
+
 .sizing {
   margin-top: 30px;
 }

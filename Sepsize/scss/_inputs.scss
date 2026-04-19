@@ -58,6 +58,13 @@
     &-btn {
       input {
         @extend %button;
+        &:hover {
+          font-size: 19px;
+          opacity: 0.8;
+        }
+        &:active {
+          opacity: 1.2;
+        }
       }
     }
   }
