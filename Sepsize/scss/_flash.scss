@@ -1,5 +1,106 @@
 @use 'abstracts' as *;
 
 .flash {
-  color: $white;
+  background-color: $section-bg;
+  margin: 30px 0;
+
+  &__inner {
+    padding: 22px 38px;
+    color: $white;
+
+    @include flex(space-between, flex-start, column);
+
+    &-form {
+      width: 100%;
+    }
+
+    &-head {
+      width: 100%;
+
+      .title {
+        h2 {
+          font-size: 18px;
+        }
+      }
+
+      .paragraphs {
+        width: 100%;
+        @include flex(space-between);
+
+        .paragraph {
+          font-size: 14px;
+          color: $paragraph;
+        }
+      }
+    }
+
+    &-content {
+      margin-top: 24px;
+      .table {
+        color: $table-text;
+
+        &__head {
+          .head__list {
+            @include flex(space-between);
+          }
+        }
+
+        &__body {
+          margin-top: 24px;
+          &-items {
+            .table-row {
+              padding: 10px 0;
+              border-top: $input-border;
+              @include flex(space-between, center);
+
+              li:first-child {
+                width: 10%;
+              }
+              li:nth-child(2) {
+                width: 7%;
+              }
+              li:nth-child(3) {
+                width: 14%;
+
+                input {
+                  @extend %input_value;
+                }
+              }
+              li:nth-child(4) {
+                width: 19%;
+              }
+            }
+          }
+        }
+
+        &__foot {
+          margin-top: 24px;
+          margin-bottom: 40px;
+          @include flex(space-between);
+
+          .card {
+            padding: 16px;
+            background-color: $card-bg;
+
+            h5 {
+              font-size: 14px;
+            }
+            span {
+              font-size: 18px;
+              color: $white;
+            }
+            p {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+
+    &-btn {
+      input {
+        @extend %button;
+      }
+    }
+  }
 }
