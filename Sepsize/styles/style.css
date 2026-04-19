@@ -28,7 +28,7 @@ ul {
   border-radius: 40px;
 }
 
-.flash__inner-btn input, .inputs__inner-btn input {
+.factor__inner-btn input, .flash__inner-btn input, .inputs__inner-btn input {
   width: 160px;
   height: 40px;
   display: flex;
@@ -145,8 +145,8 @@ ul {
   font-size: 14px;
 }
 .flash {
+  margin-top: 30px;
   background-color: #0e1a26;
-  margin: 30px 0;
 }
 .flash__inner {
   padding: 22px 38px;
@@ -236,6 +236,66 @@ ul {
   color: #ffffff;
 }
 .flash__inner-content .table__foot .card p {
+  font-size: 12px;
+}
+.factor {
+  height: 343px;
+  margin-top: 30px;
+  background-color: #0e1a26;
+}
+.factor__inner {
+  padding: 22px 38px;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.factor__inner-form {
+  width: 100%;
+}
+.factor__inner-head {
+  width: 100%;
+}
+.factor__inner-head .title h2 {
+  font-size: 18px;
+}
+.factor__inner-head .paragraphs {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.factor__inner-head .paragraphs .paragraph {
+  font-size: 14px;
+  color: #9fb0c4;
+}
+.factor__inner-content {
+  margin-top: 24px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.factor__inner-content .card {
+  width: 200px;
+  height: 140px;
+  padding: 16px;
+  background-color: #071726;
+}
+.factor__inner-content .card h5 {
+  font-size: 14px;
+}
+.factor__inner-content .card span {
+  font-size: 18px;
+  color: #ffffff;
+}
+.factor__inner-content .card p {
   font-size: 12px;
 }
 body {

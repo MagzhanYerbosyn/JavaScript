@@ -2,6 +2,7 @@
 @use 'header';
 @use 'inputs';
 @use 'flash';
+@use 'factor';
 
 body {
   background-color: $main-bg;

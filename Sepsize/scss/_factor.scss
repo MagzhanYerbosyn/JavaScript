@@ -1,0 +1,68 @@
+@use 'abstracts' as *;
+
+.factor {
+  height: 343px;
+  margin-top: 30px;
+  background-color: $section-bg;
+
+  &__inner {
+    padding: 22px 38px;
+    color: $white;
+
+    @include flex(space-between, flex-start, column);
+
+    &-form {
+      width: 100%;
+    }
+
+    &-head {
+      width: 100%;
+
+      .title {
+        h2 {
+          font-size: 18px;
+        }
+      }
+
+      .paragraphs {
+        width: 100%;
+        @include flex(space-between);
+
+        .paragraph {
+          font-size: 14px;
+          color: $paragraph;
+        }
+      }
+    }
+
+    &-content {
+      margin-top: 24px;
+      margin-bottom: 40px;
+      @include flex(space-between);
+
+      .card {
+        width: 200px;
+        height: 140px;
+        padding: 16px;
+        background-color: $card-bg;
+
+        h5 {
+          font-size: 14px;
+        }
+        span {
+          font-size: 18px;
+          color: $white;
+        }
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+
+    &-btn {
+      input {
+        @extend %button;
+      }
+    }
+  }
+}
