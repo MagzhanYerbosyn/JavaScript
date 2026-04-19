@@ -334,6 +334,25 @@ ul {
   margin-top: 24px;
 }
 
+.footer {
+  margin-top: 30px;
+  background-color: #1a2b3c;
+}
+.footer__inner {
+  color: #ffffff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.footer__inner-title h2 {
+  font-size: 20px;
+}
+.footer__inner-title h3 {
+  font-size: 12px;
+}
+
 body {
   background-color: #0f1720;
 }/*# sourceMappingURL=style.css.map */
