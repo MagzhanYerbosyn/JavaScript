@@ -154,6 +154,156 @@
             </form>
           </div>
         </section>
+
+        <section class="flash">
+          <div class="flash__inner">
+            <form class="flash__inner-form">
+              <!-- FLASH HEAD -->
+              <div class="flash__inner-head">
+                <div class="title"><h2>Module 2 — PVT / Flash Calculation</h2></div>
+                <div class="paragraphs">
+                  <p class="paragraph">Define gas composition and review flash results</p>
+                  <p class="paragraph">Editable table — mole fractions in %</p>
+                </div>
+              </div>
+              <!-- FLASH HEAD -->
+
+              <!-- FLASH CONTENT -->
+              <div class="flash__inner-content">
+                <div class="table">
+                  <!-- TABLE HEAD -->
+                  <div class="table__head">
+                    <ul class="head__list">
+                      <li>Component</li>
+                      <li>Formula</li>
+                      <li>Mole Fraction</li>
+                      <li>Molecular Weight (g/mol)</li>
+                      <li>yi * Mi</li>
+                    </ul>
+                  </div>
+                  <!-- TABLE HEAD -->
+
+                  <!-- TABLE BODY -->
+                  <div class="table__body">
+                    <ul class="body__list">
+                      <li class="body__list-item">
+                        <ul class="table-row">
+                          <li>Carbon Dioxide</li>
+                          <li>CO2</li>
+                          <li><input type="text" /></li>
+                          <li>44.01</li>
+                          <li>0.734</li>
+                        </ul>
+
+                        <ul class="table-row">
+                          <li>Nitrogen</li>
+                          <li>N2</li>
+                          <li><input type="text" /></li>
+                          <li>28.01</li>
+                          <li>0.734</li>
+                        </ul>
+
+                        <ul class="table-row">
+                          <li>Methane</li>
+                          <li>CH4</li>
+                          <li><input type="text" /></li>
+                          <li>16.04</li>
+                          <li>0.734</li>
+                        </ul>
+
+                        <ul class="table-row">
+                          <li>Ethane</li>
+                          <li>C2H6</li>
+                          <li><input type="text" /></li>
+                          <li>30.07</li>
+                          <li>0.734</li>
+                        </ul>
+
+                        <ul class="table-row">
+                          <li>Propane</li>
+                          <li>C3H8</li>
+                          <li><input type="text" /></li>
+                          <li>44.10</li>
+                          <li>0.734</li>
+                        </ul>
+
+                        <ul class="table-row">
+                          <li>Isobutane</li>
+                          <li>i-C4H10</li>
+                          <li><input type="text" /></li>
+                          <li>58.12</li>
+                          <li>0.734</li>
+                        </ul>
+
+                        <ul class="table-row">
+                          <li>n-Butane</li>
+                          <li>n-C4H10</li>
+                          <li><input type="text" /></li>
+                          <li>58.12</li>
+                          <li>0.734</li>
+                        </ul>
+
+                        <ul class="table-row">
+                          <li>Isopentane</li>
+                          <li>i-C5H12</li>
+                          <li><input type="text" /></li>
+                          <li>72.15</li>
+                          <li>0.734</li>
+                        </ul>
+
+                        <ul class="table-row">
+                          <li>n-Pentane</li>
+                          <li>n-C5H12</li>
+                          <li><input type="text" /></li>
+                          <li>72.15</li>
+                          <li>0.734</li>
+                        </ul>
+
+                        <ul class="table-row">
+                          <li>Hexanes</li>
+                          <li>C6+</li>
+                          <li><input type="text" /></li>
+                          <li>86.00*</li>
+                          <li>0.734</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- TABLE BODY -->
+
+                  <!-- TABLE FOOT -->
+                  <div class="table__foot">
+                    <div class="card">
+                      <h5>M_gas</h5>
+                      <span>19.54 g/mol</span>
+                      <p>Calculated weighted molar mass of the gas mixture</p>
+                    </div>
+
+                    <div class="card">
+                      <h5>SG</h5>
+                      <span>0.6747</span>
+                      <p>Specific gravity relative to air (air = 28.97 g/mol)</p>
+                    </div>
+
+                    <div class="card">
+                      <h5>Viscosity</h5>
+                      <span>0.012 cP</span>
+                      <p>Estimated gas viscosity at operating conditions</p>
+                    </div>
+                  </div>
+                  <!-- TABLE FOOT -->
+                </div>
+              </div>
+              <!-- FLASH CONTENT -->
+
+              <!-- INPUTS BUTTON -->
+              <div class="flash__inner-btn">
+                <input type="submit" value="Calculate" />
+              </div>
+              <!-- INPUTS BUTTON -->
+            </form>
+          </div>
+        </section>
       </div>
     </main>
     <!-- MAIN -->

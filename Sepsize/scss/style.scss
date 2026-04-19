@@ -1,6 +1,7 @@
 @use 'abstracts' as *;
 @use 'header';
 @use 'inputs';
+@use 'flash';
 
 body {
   background-color: $main-bg;
