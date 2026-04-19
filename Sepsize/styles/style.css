@@ -11,7 +11,6 @@
   margin: 0 auto;
 }
 
-ol,
 ul {
   list-style-type: none;
 }
@@ -239,7 +238,6 @@ ul {
   font-size: 12px;
 }
 .factor {
-  height: 343px;
   margin-top: 30px;
   background-color: #0e1a26;
 }
@@ -298,6 +296,44 @@ ul {
 .factor__inner-content .card p {
   font-size: 12px;
 }
+.sizing {
+  margin-top: 30px;
+}
+.sizing__inner {
+  padding: 22px 38px;
+  color: #ffffff;
+  background-color: #0e1a26;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.sizing__inner-form {
+  width: 100%;
+}
+.sizing__inner-head {
+  width: 100%;
+}
+.sizing__inner-head h2 {
+  font-size: 18px;
+}
+.sizing__inner-content .items-list .item {
+  margin-top: 24px;
+  margin-left: 10%;
+  background-color: none;
+}
+.sizing__inner-content .items-list .item .formula {
+  background-color: initial;
+}
+.sizing__inner-content .items-list .item h6 {
+  font-size: 16px;
+  color: #9fb0c4;
+}
+.sizing__inner-content .items-list .item math:not(math:first-child) {
+  margin-top: 24px;
+}
+
 body {
   background-color: #0f1720;
 }/*# sourceMappingURL=style.css.map */

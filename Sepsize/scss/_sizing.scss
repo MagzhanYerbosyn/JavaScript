@@ -1,0 +1,50 @@
+@use 'abstracts' as *;
+
+.sizing {
+  margin-top: 30px;
+
+  &__inner {
+    padding: 22px 38px;
+    color: $white;
+    background-color: $section-bg;
+
+    @include flex(space-between, flex-start, column);
+
+    &-form {
+      width: 100%;
+    }
+
+    &-head {
+      width: 100%;
+
+      h2 {
+        font-size: 18px;
+      }
+    }
+
+    &-content {
+      .items-list {
+        .item {
+          margin-top: 24px;
+          margin-left: 10%;
+          background-color: none;
+
+          .formula {
+            background-color: initial;
+          }
+
+          h6 {
+            font-size: 16px;
+            color: $paragraph;
+          }
+
+          math {
+            &:not(math:first-child) {
+              margin-top: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
