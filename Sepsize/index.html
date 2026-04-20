@@ -30,7 +30,9 @@
       onload="renderMathInElement(document.body)"
     ></script>
     <link rel="stylesheet" href="./styles/style.css" />
-    <script src="./js/index.js"></script>
+    <script defer src="./js/commons/constants.js"></script>
+    <script defer src="./js/commons/utils.js"></script>
+    <script defer src="./js/index.js"></script>
     <title>Sepsize</title>
   </head>
   <body>
@@ -69,7 +71,7 @@
       <div class="container">
         <section class="inputs">
           <div class="inputs__inner">
-            <form class="inputs__inner-form">
+            <form class="inputs__inner-form" data-js-operating-inputs>
               <!-- INPUT HEAD -->
               <div class="inputs__inner-head">
                 <div class="title"><h2>Module 1 - Operating Inputs</h2></div>
@@ -87,22 +89,22 @@
                 <div class="content-list">
                   <div class="content-list__item">
                     <span>Pressure (psia)</span>
-                    <input type="text" />
+                    <input type="number" name="pressure" required />
                   </div>
 
                   <div class="content-list__item">
                     <span>Temperature (R)</span>
-                    <input type="text" />
+                    <input type="number" name="temperature" required />
                   </div>
 
                   <div class="content-list__item">
                     <span>Standard Pressure (psia)</span>
-                    <input type="text" />
+                    <input type="number" name="pressureStandard" required />
                   </div>
 
                   <div class="content-list__item">
                     <span>Standard Tempeature (R)</span>
-                    <input type="text" />
+                    <input type="number" name="temperatureStandard" required />
                   </div>
                 </div>
 
@@ -111,22 +113,22 @@
                 <div class="content-list">
                   <div class="content-list__item">
                     <span>Total Flow Rate (bbl/day)</span>
-                    <input type="text" />
+                    <input type="number" name="totalFlowRate" required />
                   </div>
 
                   <div class="content-list__item">
                     <span>Water Flow Rate (bbl/day)</span>
-                    <input type="text" />
+                    <input type="number" name="waterFlowRate" required />
                   </div>
 
                   <div class="content-list__item">
                     <span>Gas Flow Rate (MMSCFD)</span>
-                    <input type="text" />
+                    <input type="number" name="gasFlowRate" required />
                   </div>
 
                   <div class="content-list__item">
                     <span>Oil Flow Rate (bbl/day)</span>
-                    <input type="text" />
+                    <input type="number" name="oilFlowRate" required />
                   </div>
                 </div>
 
@@ -135,32 +137,32 @@
                 <div class="content-list">
                   <div class="content-list__item">
                     <span>GOR (scf/STB)</span>
-                    <input type="text" />
+                    <input type="number" name="GOR" required />
                   </div>
 
                   <div class="content-list__item">
                     <span>API</span>
-                    <input type="text" />
+                    <input type="number" name="API" required />
                   </div>
 
                   <div class="content-list__item">
                     <span>Oil Density (lb/ft*3)</span>
-                    <input type="text" />
+                    <input type="number" name="oilDensity" required />
                   </div>
 
                   <div class="content-list__item">
                     <span>Droplet Size Removal (microns)</span>
-                    <input type="text" />
+                    <input type="number" name="dropletSizeRemoval" required />
                   </div>
 
                   <div class="content-list__item">
                     <span>Surface Tension (lb/ft)</span>
-                    <input type="text" />
+                    <input type="number" name="surfaceTension" required />
                   </div>
 
                   <div class="content-list__item">
                     <span>Water Cut (%)</span>
-                    <input type="text" />
+                    <input type="text" name="waterCut" required />
                   </div>
                 </div>
               </div>
@@ -168,7 +170,7 @@
 
               <!-- INPUTS BUTTON -->
               <div class="inputs__inner-btn">
-                <input type="submit" value="Accept Data" />
+                <input type="submit" value="Accept Data" data-js-inputs-btn />
               </div>
               <!-- INPUTS BUTTON -->
             </form>
