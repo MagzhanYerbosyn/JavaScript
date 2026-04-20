@@ -31,5 +31,9 @@ flashInputsFormElement.addEventListener('submit', (event) => {
     arr.push(parseFloat(element.textContent));
   }
 
-  M_gas.textContent = arr.reduce((acc, value) => acc + value);
+  const sum = arr.reduce((acc, value) => acc + value);
+  M_gas.textContent = sum.toFixed(2) + ' g/mol';
+
+  // Calculating SG
+  SG.textContent = (sum / M_air).toFixed(1);
 });

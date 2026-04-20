@@ -6,4 +6,5 @@ const flashInputsFormElement = document.querySelector('[data-js-flash-inputs]');
 const molecularWeight = document.querySelectorAll('[data-js-molecularWeight]');
 const product = document.querySelectorAll('[data-js-yi-Mi]');
 const M_gas = document.querySelector('[data-js-M-gas]');
+const M_air = 29;
 const SG = document.querySelector('[data-js-SG]');
