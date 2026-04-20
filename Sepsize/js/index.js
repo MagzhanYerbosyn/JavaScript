@@ -8,15 +8,14 @@ operatingInputsFormElement.addEventListener('submit', (event) => {
   console.log('Operating Inputs: ', Object.fromEntries(operatingInputs));
 });
 
-const molecularWeight = document.querySelectorAll('[data-js-molecularWeight]');
-console.log(molecularWeight);
-const product = document.querySelectorAll('[data-js-yi-Mi]');
-
 flashInputsFormElement.addEventListener('submit', (event) => {
   event.preventDefault();
 
   flashInputs = new FormData(flashInputsFormElement);
+
   console.log('Flash Inputs: ', Object.fromEntries(flashInputs));
+
+  //Setting yi*Mi in HTML
   for (let i = 0; i < molecularWeight.length; i++) {
     product[i].textContent = (
       (parseFloat(molecularWeight[i].textContent) * Array.from(flashInputs)[i][1]) /
@@ -24,4 +23,13 @@ flashInputsFormElement.addEventListener('submit', (event) => {
     ).toFixed(3);
     console.log(Array.from(flashInputs)[i][1]);
   }
+
+  //Calculating M_gas
+  const arr = [];
+
+  for (element of product) {
+    arr.push(parseFloat(element.textContent));
+  }
+
+  M_gas.textContent = arr.reduce((acc, value) => acc + value);
 });
