@@ -2,6 +2,9 @@
 const operatingInputsFormElement = document.querySelector('[data-js-operating-inputs]');
 const flashInputsFormElement = document.querySelector('[data-js-flash-inputs]');
 
+// Calculate Buttons
+const factorCalculateButton = document.querySelector('[data-js-factor-calculate]');
+
 // Elements from Flash Calculation Table
 const molecularWeight = document.querySelectorAll('[data-js-molecularWeight]');
 const product = document.querySelectorAll('[data-js-yi-Mi]');
@@ -10,8 +13,8 @@ const M_air = 29;
 const SG = document.querySelector('[data-js-SG]');
 
 // Elements from Z-factor Analysis module
-const P_pc = document.querySelector('data-js-pseudo-critical-pressure');
-const T_pc = document.querySelector('data-js-pseudo-critical-temperature');
-const Z = document.querySelector('data-js-pseudo-z-factor');
-const P_pr = document.querySelector('data-js-pseudo-reduced-pressure');
-const T_pr = document.querySelector('data-js-pseudo-reduced-temperature');
+const P_pc = document.querySelector('[data-js-pseudo-critical-pressure]');
+const T_pc = document.querySelector('[data-js-pseudo-critical-temperature]');
+const Z = document.querySelector('[data-js-pseudo-z-factor]');
+const P_pr = document.querySelector('[data-js-pseudo-reduced-pressure]');
+const T_pr = document.querySelector('[data-js-pseudo-reduced-temperature]');

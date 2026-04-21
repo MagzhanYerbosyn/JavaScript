@@ -38,3 +38,17 @@ flashInputsFormElement.addEventListener('submit', (event) => {
   // Calculating SG
   SG.textContent = (sum / M_air).toFixed(1);
 });
+
+factorCalculateButton.addEventListener('click', (event) => {
+  event.stopPropagation();
+
+  let sgNumber = parseFloat(SG.textContent);
+
+  // Calculation for Pseudo-Critical Pressure
+  P_pc.textContent = 677 + 15 * sgNumber - 37.5 * Math.pow(sgNumber, 2);
+
+  // Calculation for Pseudo-Critical Pressure
+  T_pc.textContent = 168 + 325 * sgNumber - 12.5 * Math.pow(sgNumber, 2);
+
+  // Calculation for Reduced Pressure
+});

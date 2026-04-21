@@ -89,22 +89,22 @@
                 <div class="content-list">
                   <div class="content-list__item">
                     <span>Pressure (psia)</span>
-                    <input type="number" name="pressure" required />
+                    <input type="number" step="any" name="pressure" required />
                   </div>
 
                   <div class="content-list__item">
                     <span>Temperature (R)</span>
-                    <input type="number" name="temperature" required />
+                    <input type="number" step="any" name="temperature" required />
                   </div>
 
                   <div class="content-list__item">
                     <span>Standard Pressure (psia)</span>
-                    <input type="number" name="pressureStandard" required />
+                    <input type="number" step="any" name="pressureStandard" required />
                   </div>
 
                   <div class="content-list__item">
                     <span>Standard Tempeature (R)</span>
-                    <input type="number" name="temperatureStandard" required />
+                    <input type="number" step="any" name="temperatureStandard" required />
                   </div>
                 </div>
 
@@ -113,22 +113,22 @@
                 <div class="content-list">
                   <div class="content-list__item">
                     <span>Total Flow Rate (bbl/day)</span>
-                    <input type="number" name="totalFlowRate" required />
+                    <input type="number" step="any" name="totalFlowRate" required />
                   </div>
 
                   <div class="content-list__item">
                     <span>Water Flow Rate (bbl/day)</span>
-                    <input type="number" name="waterFlowRate" required />
+                    <input type="number" step="any" name="waterFlowRate" required />
                   </div>
 
                   <div class="content-list__item">
                     <span>Gas Flow Rate (MMSCFD)</span>
-                    <input type="number" name="gasFlowRate" required />
+                    <input type="number" step="any" name="gasFlowRate" required />
                   </div>
 
                   <div class="content-list__item">
                     <span>Oil Flow Rate (bbl/day)</span>
-                    <input type="number" name="oilFlowRate" required />
+                    <input type="number" step="any" name="oilFlowRate" required />
                   </div>
                 </div>
 
@@ -137,32 +137,32 @@
                 <div class="content-list">
                   <div class="content-list__item">
                     <span>GOR (scf/STB)</span>
-                    <input type="number" name="GOR" required />
+                    <input type="number" step="any" name="GOR" required />
                   </div>
 
                   <div class="content-list__item">
                     <span>API</span>
-                    <input type="number" name="API" required />
+                    <input type="number" step="any" name="API" required />
                   </div>
 
                   <div class="content-list__item">
                     <span>Oil Density (lb/ft*3)</span>
-                    <input type="number" name="oilDensity" required />
+                    <input type="number" step="any" name="oilDensity" required />
                   </div>
 
                   <div class="content-list__item">
                     <span>Droplet Size Removal (microns)</span>
-                    <input type="number" name="dropletSizeRemoval" required />
+                    <input type="number" step="any" name="dropletSizeRemoval" required />
                   </div>
 
                   <div class="content-list__item">
                     <span>Surface Tension (lb/ft)</span>
-                    <input type="number" name="surfaceTension" required />
+                    <input type="number" step="any" name="surfaceTension" required />
                   </div>
 
                   <div class="content-list__item">
                     <span>Water Cut (%)</span>
-                    <input type="text" name="waterCut" required />
+                    <input type="text" step="any" name="waterCut" required />
                   </div>
                 </div>
               </div>
@@ -373,13 +373,13 @@
               <div class="factor__inner-content">
                 <div class="card">
                   <h5>P_pc</h5>
-                  <span data-js-pseudo-critical-pressure>0<span>psia</span></span>
+                  <span data-js-pseudo-critical-pressure>0 <span>psia</span></span>
                   <p>Pseudo-critical pressure from Sutton correlation</p>
                 </div>
 
                 <div class="card">
                   <h5>T_pc</h5>
-                  <span data-js-pseudo-critical-temperature>0<span>R</span></span>
+                  <span data-js-pseudo-critical-temperature>0 <span>R</span></span>
                   <p>Pseudo-critical temperature from Sutton correlation</p>
                 </div>
 
@@ -405,7 +405,7 @@
 
               <!-- FACTOR BUTTON -->
               <div class="factor__inner-btn">
-                <input type="submit" value="Calculate" />
+                <input type="button" value="Calculate" data-js-factor-calculate />
               </div>
               <!-- FACTOR BUTTON -->
             </form>
