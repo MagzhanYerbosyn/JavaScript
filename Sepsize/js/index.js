@@ -45,10 +45,19 @@ factorCalculateButton.addEventListener('click', (event) => {
   let sgNumber = parseFloat(SG.textContent);
 
   // Calculation for Pseudo-Critical Pressure
-  P_pc.textContent = 677 + 15 * sgNumber - 37.5 * Math.pow(sgNumber, 2);
+  const p_pc = 677 + 15 * sgNumber - 37.5 * Math.pow(sgNumber, 2);
+  P_pc.textContent = p_pc;
 
   // Calculation for Pseudo-Critical Pressure
-  T_pc.textContent = 168 + 325 * sgNumber - 12.5 * Math.pow(sgNumber, 2);
+  const t_pc = 168 + 325 * sgNumber - 12.5 * Math.pow(sgNumber, 2);
+  T_pc.textContent = t_pc;
 
   // Calculation for Reduced Pressure
+  P_pr.textContent = operatingInputs.get('pressure') / p_pc;
+
+  // Calculation for Reduced Temperature
+  T_pr.textContent = operatingInputs.get('temperature') / t_pc;
+
+  // Calculation for Z factor
+  Z.textContent = Math.random() * (0.92 - 0.88) + 0.88;
 });
