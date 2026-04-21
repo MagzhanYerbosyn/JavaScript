@@ -8,3 +8,10 @@ const product = document.querySelectorAll('[data-js-yi-Mi]');
 const M_gas = document.querySelector('[data-js-M-gas]');
 const M_air = 29;
 const SG = document.querySelector('[data-js-SG]');
+
+// Elements from Z-factor Analysis module
+const P_pc = document.querySelector('data-js-pseudo-critical-pressure');
+const T_pc = document.querySelector('data-js-pseudo-critical-temperature');
+const Z = document.querySelector('data-js-pseudo-z-factor');
+const P_pr = document.querySelector('data-js-pseudo-reduced-pressure');
+const T_pr = document.querySelector('data-js-pseudo-reduced-temperature');

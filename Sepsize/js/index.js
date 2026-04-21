@@ -4,6 +4,7 @@ let flashInputs = new FormData();
 operatingInputsFormElement.addEventListener('submit', (event) => {
   event.preventDefault();
 
+  // Getting datas from module 1 inputs
   operatingInputs = new FormData(operatingInputsFormElement);
   console.log('Operating Inputs: ', Object.fromEntries(operatingInputs));
 });
