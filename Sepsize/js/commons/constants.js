@@ -18,3 +18,7 @@ const T_pc = document.querySelector('[data-js-pseudo-critical-temperature]');
 const Z = document.querySelector('[data-js-pseudo-z-factor]');
 const P_pr = document.querySelector('[data-js-pseudo-reduced-pressure]');
 const T_pr = document.querySelector('[data-js-pseudo-reduced-temperature]');
+
+// Elements from Separator Sizing module
+const sizingCalculateButton = document.querySelector('[data-js-sizing-calculate]');
+const gasOperElement = document.querySelector('[data-js-gas-oper]');

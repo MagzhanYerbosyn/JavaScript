@@ -5,7 +5,7 @@ operatingInputsFormElement.addEventListener('submit', (event) => {
   event.preventDefault();
 
   // Getting data from module 1 inputs
-  operatingInputs = new FormData(operatingInputsFormElement);
+  operatingInputs = new FormDatax(operatingInputsFormElement);
   console.log('Operating Inputs: ', Object.fromEntries(operatingInputs));
 });
 
@@ -61,4 +61,24 @@ factorCalculateButton.addEventListener('click', (event) => {
 
   // Calculation for Z factor
   Z.textContent = (Math.random() * (0.92 - 0.88) + 0.88).toFixed(2);
+});
+
+sizingCalculateButton.addEventListener('click', (event) => {
+  event.stopPropagation();
+
+  // 1. Gas flow rate at operating conditions
+  const Q_g = (
+    +operatingInputs.get('gasFlowRate') *
+    (+operatingInputs.get('pressureStandard') / 290) *
+    (+operatingInputs.get('temperature') / +operatingInputs.get('temperatureStandard'))
+  ).toFixed(4);
+
+  const Q_g_converted = (Q_g * 11.5648).toFixed(3);
+
+  const gasOperFormula = ` Q_{g(oper)} = (${operatingInputs.get('gasFlowRate')}) \\times \\frac{${operatingInputs.get('pressureStandard')}}{290} \\times \\frac{${operatingInputs.get('temperature')}}{${operatingInputs.get('temperatureStandard')}} = ${Q_g} \\text{ MMSCFD} = ${Q_g_converted} \\text{ ft}^3/s`;
+
+  katex.render(gasOperFormula, gasOperElement, {
+    throwOnError: false,
+    displayMode: true,
+  });
 });
