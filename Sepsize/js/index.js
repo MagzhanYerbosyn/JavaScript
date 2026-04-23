@@ -81,4 +81,29 @@ sizingCalculateButton.addEventListener('click', (event) => {
     throwOnError: false,
     displayMode: true,
   });
+
+  // 2. Maximum allowable gas velocity (Souders-Brown)
+  // 2.1 Gas Density
+  const rho_g = (
+    2.7 *
+    ((+SG.textContent * +operatingInputs.get('pressure')) /
+      (+operatingInputs.get('temperature') * +Z.textContent))
+  ).toFixed(2);
+
+  const gasDensityFormula = `\\rho_g = 2.7 \\times \\frac{${SG.textContent} \\times ${operatingInputs.get('pressure')}}{${operatingInputs.get('temperature')}} \\times ${Z.textContent} = ${rho_g} \\left( \\frac{\\text{lb}}{\\text{ft}^3} \\right)`;
+
+  katex.render(gasDensityFormula, gasDensityElement, {
+    throwOnError: false,
+    displayMode: true,
+  });
+
+  // 2.2 Liquid Density
+  const rho_l = (62.4 * (141.5 / (131.5 + +operatingInputs.get('API')))).toFixed(1);
+
+  const liquidDensityFormula = `\\rho_l = 62.4 \\times \\frac{141.5}{131.5 + ${operatingInputs.get('API')}} = ${rho_l} \\left( \\frac{\\text{lb}}{\\text{ft}^3} \\right)`;
+
+  katex.render(liquidDensityFormula, liquidDensityElement, {
+    throwOnError: false,
+    displayMode: true,
+  });
 });
