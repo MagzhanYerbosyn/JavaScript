@@ -27,7 +27,7 @@ ul {
   border-radius: 40px;
 }
 
-.factor__inner-btn input, .flash__inner-btn input, .inputs__inner-btn input {
+.sizing__inner-btn input, .factor__inner-btn input, .flash__inner-btn input, .inputs__inner-btn input {
   width: 160px;
   height: 40px;
   display: flex;
@@ -342,6 +342,16 @@ ul {
 }
 .sizing__inner-head h2 {
   font-size: 18px;
+}
+.sizing__inner-btn input {
+  margin-top: 16px;
+}
+.sizing__inner-btn input:hover {
+  font-size: 19px;
+  opacity: 0.8;
+}
+.sizing__inner-btn input:active {
+  opacity: 1.2;
 }
 .sizing__inner-content .items-list .item {
   margin-top: 24px;
