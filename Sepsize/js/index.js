@@ -4,7 +4,7 @@ let flashInputs = new FormData();
 operatingInputsFormElement.addEventListener('submit', (event) => {
   event.preventDefault();
 
-  // Getting datas from module 1 inputs
+  // Getting data from module 1 inputs
   operatingInputs = new FormData(operatingInputsFormElement);
   console.log('Operating Inputs: ', Object.fromEntries(operatingInputs));
 });
@@ -46,19 +46,19 @@ factorCalculateButton.addEventListener('click', (event) => {
 
   // Calculation for Pseudo-Critical Pressure
   const p_pc = (677 + 15 * sgNumber - 37.5 * Math.pow(sgNumber, 2)).toFixed(1);
-  P_pc.textContent = p_pc;
+  P_pc.textContent = p_pc + 'psia';
 
   // Calculation for Pseudo-Critical Pressure
-  const t_pc = (168 + 325 * sgNumber - 12.5 * Math.pow(sgNumber, 2)).toFixed(2);
+  const t_pc = (168 + 325 * sgNumber - 12.5 * Math.pow(sgNumber, 2)).toFixed(1);
   console.log(t_pc);
-  T_pc.textContent = t_pc;
+  T_pc.textContent = t_pc + 'R';
 
   // Calculation for Reduced Pressure
-  P_pr.textContent = (operatingInputs.get('pressure') / p_pc).toFixed(2);
+  P_pr.textContent = (+operatingInputs.get('pressure') / p_pc).toFixed(2);
 
   // Calculation for Reduced Temperature
-  T_pr.textContent = ((operatingInputs.get('temperature') + 460) / t_pc).toFixed(2);
+  T_pr.textContent = (+operatingInputs.get('temperature') / t_pc).toFixed(2);
 
   // Calculation for Z factor
-  Z.textContent = Math.random() * (0.92 - 0.88) + 0.88;
+  Z.textContent = (Math.random() * (0.92 - 0.88) + 0.88).toFixed(2);
 });
