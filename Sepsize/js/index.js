@@ -77,10 +77,7 @@ sizingCalculateButton.addEventListener('click', (event) => {
 
   const gasOperFormula = ` Q_{g(oper)} = (${operatingInputs.get('gasFlowRate')}) \\times \\frac{${operatingInputs.get('pressureStandard')}}{290} \\times \\frac{${operatingInputs.get('temperature')}}{${operatingInputs.get('temperatureStandard')}} = ${Q_g} \\text{ MMSCFD} = ${Q_g_converted} \\text{ ft}^3/s`;
 
-  katex.render(gasOperFormula, gasOperElement, {
-    throwOnError: false,
-    displayMode: true,
-  });
+  myKatexRender(gasOperFormula, gasOperElement);
 
   // 2. Maximum allowable gas velocity (Souders-Brown)
   // 2.1 Gas Density
@@ -92,18 +89,18 @@ sizingCalculateButton.addEventListener('click', (event) => {
 
   const gasDensityFormula = `\\rho_g = 2.7 \\times \\frac{${SG.textContent} \\times ${operatingInputs.get('pressure')}}{${operatingInputs.get('temperature')}} \\times ${Z.textContent} = ${rho_g} \\left( \\frac{\\text{lb}}{\\text{ft}^3} \\right)`;
 
-  katex.render(gasDensityFormula, gasDensityElement, {
-    throwOnError: false,
-    displayMode: true,
-  });
-
+  myKatexRender(gasDensityFormula, gasDensityElement);
   // 2.2 Liquid Density
   const rho_l = (62.4 * (141.5 / (131.5 + +operatingInputs.get('API')))).toFixed(1);
 
   const liquidDensityFormula = `\\rho_l = 62.4 \\times \\frac{141.5}{131.5 + ${operatingInputs.get('API')}} = ${rho_l} \\left( \\frac{\\text{lb}}{\\text{ft}^3} \\right)`;
 
-  katex.render(liquidDensityFormula, liquidDensityElement, {
-    throwOnError: false,
-    displayMode: true,
-  });
+  myKatexRender(liquidDensityFormula, liquidDensityElement);
+
+  // 2.3 Gas Velocity (Sounders-Brown)
+  const V_gas_max = 0.197 * Math.sqrt((rho_l - rho_g) / rho_g);
+
+  const gasVelocityFormula = `V_{\\mathrm{gas,max}} = 0.197 \\sqrt{\\frac{${rho_l} - ${rho_g}}{${rho_g}}} = ${V_gas_max} \\,\\mathrm{ft/s}`;
+
+  myKatexRender(gasVelocityFormula, gasVelocityElement);
 });

@@ -24,3 +24,4 @@ const sizingCalculateButton = document.querySelector('[data-js-sizing-calculate]
 const gasOperElement = document.querySelector('[data-js-gas-oper]');
 const gasDensityElement = document.querySelector('[data-js-gas-density]');
 const liquidDensityElement = document.querySelector('[data-js-liquid-density]');
+const gasVelocityElement = document.querySelector('[data-js-gas-velocity]');
