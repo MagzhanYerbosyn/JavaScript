@@ -5,7 +5,7 @@ operatingInputsFormElement.addEventListener('submit', (event) => {
   event.preventDefault();
 
   // Getting data from module 1 inputs
-  operatingInputs = new FormDatax(operatingInputsFormElement);
+  operatingInputs = new FormData(operatingInputsFormElement);
   console.log('Operating Inputs: ', Object.fromEntries(operatingInputs));
 });
 
@@ -87,9 +87,10 @@ sizingCalculateButton.addEventListener('click', (event) => {
       (+operatingInputs.get('temperature') * +Z.textContent))
   ).toFixed(2);
 
-  const gasDensityFormula = `\\rho_g = 2.7 \\times \\frac{${SG.textContent} \\times ${operatingInputs.get('pressure')}}{${operatingInputs.get('temperature')}} \\times ${Z.textContent} = ${rho_g} \\left( \\frac{\\text{lb}}{\\text{ft}^3} \\right)`;
+  const gasDensityFormula = `\\rho_g = 2.7 \\times \\frac{${SG.textContent} \\times ${operatingInputs.get('pressure')}}{${operatingInputs.get('temperature')} \\times ${Z.textContent}  } = ${rho_g} \\left( \\frac{\\text{lb}}{\\text{ft}^3} \\right)`;
 
   myKatexRender(gasDensityFormula, gasDensityElement);
+
   // 2.2 Liquid Density
   const rho_l = (62.4 * (141.5 / (131.5 + +operatingInputs.get('API')))).toFixed(1);
 
@@ -98,9 +99,28 @@ sizingCalculateButton.addEventListener('click', (event) => {
   myKatexRender(liquidDensityFormula, liquidDensityElement);
 
   // 2.3 Gas Velocity (Sounders-Brown)
-  const V_gas_max = 0.197 * Math.sqrt((rho_l - rho_g) / rho_g);
+  const V_gas_max = (0.197 * Math.sqrt((rho_l - rho_g) / rho_g)).toFixed(2);
 
   const gasVelocityFormula = `V_{\\mathrm{gas,max}} = 0.197 \\sqrt{\\frac{${rho_l} - ${rho_g}}{${rho_g}}} = ${V_gas_max} \\,\\mathrm{ft/s}`;
 
   myKatexRender(gasVelocityFormula, gasVelocityElement);
+
+  // 3.Minimum droplet size
+  // minimum time velocity
+  const V_t_min = V_gas_max / 3;
+
+  const velocityTMinFormula = `V_{\\mathrm{t,min}} = \\frac{v_{\\mathrm{gas}}}{\\frac{L}{D}} = \\frac{${V_gas_max}}{3} = ${V_t_min} \\, \\frac{\\mathrm{ft}}{\\mathrm{s}}`;
+
+  myKatexRender(velocityTMinFormula, velocityTMinElement);
+
+  // minimum particle diameter
+  const viscosityConverted = +viscosity.textContent * 6.7197 * Math.pow(10, -4);
+
+  const d_p_min = Math.sqrt((18 * viscosityConverted * V_t_min) / ((rho_l - rho_g) * 32.2)).toFixed(
+    4
+  );
+
+  const minParticleDiameterFormula = `d_{\\mathrm{p,min}} = \\sqrt{\\frac{18 \\times ${(viscosityConverted * Math.pow(10, 6)).toFixed(2)} \\times 10^{-6} \\times ${V_t_min} }{(${rho_l} - ${rho_g}) \\times 32.2}} = ${d_p_min * Math.pow(10, 6)} \\mathrm{\\mu m}`;
+
+  myKatexRender(minParticleDiameterFormula, minParticleDiameterElement);
 });

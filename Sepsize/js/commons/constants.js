@@ -11,6 +11,7 @@ const product = document.querySelectorAll('[data-js-yi-Mi]');
 const M_gas = document.querySelector('[data-js-M-gas]');
 const M_air = 29;
 const SG = document.querySelector('[data-js-SG]');
+const viscosity = document.querySelector('[data-js-viscosity]');
 
 // Elements from Z-factor Analysis module
 const P_pc = document.querySelector('[data-js-pseudo-critical-pressure]');
@@ -25,3 +26,5 @@ const gasOperElement = document.querySelector('[data-js-gas-oper]');
 const gasDensityElement = document.querySelector('[data-js-gas-density]');
 const liquidDensityElement = document.querySelector('[data-js-liquid-density]');
 const gasVelocityElement = document.querySelector('[data-js-gas-velocity]');
+const velocityTMinElement = document.querySelector('[data-js-velocity-t]');
+const minParticleDiameterElement = document.querySelector('[data-js-min-part-diameter]');
