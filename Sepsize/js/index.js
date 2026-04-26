@@ -123,4 +123,12 @@ sizingCalculateButton.addEventListener('click', (event) => {
   const minParticleDiameterFormula = `d_{\\mathrm{p,min}} = \\sqrt{\\frac{18 \\times ${(viscosityConverted * Math.pow(10, 6)).toFixed(2)} \\times 10^{-6} \\times ${V_t_min} }{(${rho_l} - ${rho_g}) \\times 32.2}} = ${d_p_min * Math.pow(10, 6)} \\mathrm{\\mu m}`;
 
   myKatexRender(minParticleDiameterFormula, minParticleDiameterElement);
+
+  // 4. Liquid Residence Time
+
+  const V_l = (((+operatingInputs.get('totalFlowRate') * 5.615) / 86400) * 900).toFixed(0);
+
+  const liquidVolumeFormula = ` V_L = \\left( \\frac{ ${operatingInputs.get('totalFlowRate')} \\times 5.615}{86400} \\right) \\times 900 = ${V_l} \\, \\mathrm{ft}^3 `;
+
+  myKatexRender(liquidVolumeFormula, liquidVolumeElement);
 });
