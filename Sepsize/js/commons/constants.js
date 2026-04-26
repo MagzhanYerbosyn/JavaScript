@@ -29,3 +29,7 @@ const gasVelocityElement = document.querySelector('[data-js-gas-velocity]');
 const velocityTMinElement = document.querySelector('[data-js-velocity-t]');
 const minParticleDiameterElement = document.querySelector('[data-js-min-part-diameter]');
 const liquidVolumeElement = document.querySelector('[data-js-liquid-volume]');
+const A_l = 1.178;
+const newLiquidVolElement = document.querySelector('[data-js-new-liquid-vol]');
+const diameterElement = document.querySelector('[data-js-diameter]');
+const lengthElement = document.querySelector('[data-js-length]');

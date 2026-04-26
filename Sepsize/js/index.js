@@ -131,4 +131,25 @@ sizingCalculateButton.addEventListener('click', (event) => {
   const liquidVolumeFormula = ` V_L = \\left( \\frac{ ${operatingInputs.get('totalFlowRate')} \\times 5.615}{86400} \\right) \\times 900 = ${V_l} \\, \\mathrm{ft}^3 `;
 
   myKatexRender(liquidVolumeFormula, liquidVolumeElement);
+
+  // 5. Separator Dimensions
+  const V_L = (A_l * 3).toFixed(3);
+
+  const newLiquidVolumeFormula = `V_L = A_l \\times L = 1.178 D^2 \\times 3 D = ${V_L} D^3`;
+
+  myKatexRender(newLiquidVolumeFormula, newLiquidVolElement);
+
+  // Calculating Diameter
+  const D = (V_l / A_l).toFixed(1);
+
+  const diameterFormula = `D = \\frac{V_l}{A_L} = \\frac{ ${V_l} }{ ${A_l} } = ${D} \\, \\mathrm{ft}  `;
+
+  myKatexRender(diameterFormula, diameterElement);
+
+  // Calculating Length
+  const length = (V_l / 0.3927 / Math.pow(D, 2)).toFixed(1);
+
+  const lengthFormula = `L_{\\mathrm{sep}} = \\frac{${V_l}}{0.3927 \\times ${D} ^2} = ${length} \\, \\mathrm{ft}`;
+
+  myKatexRender(lengthFormula, lengthElement);
 });

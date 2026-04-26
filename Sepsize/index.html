@@ -501,7 +501,7 @@
                     <div class="formula">
                       $$ \tau_{\mathrm{ret}} = 15 \, \mathrm{min} = 900 \, \mathrm{sec} $$
                     </div>
-                    <div class="formula">$$ V_L = Q_l \times \tau_{\mathrm{ret}} $$</div>
+                    <div class="formula">$$ V_l = Q_l \times \tau_{\mathrm{ret}} $$</div>
                     <div class="formula" data-js-liquid-volume>
                       <!-- $$ V_L = \left( \frac{28300 \times 5.615}{86400} \right) \times 900 = 1656 \,
                       \mathrm{ft}^3 $$ -->
@@ -512,15 +512,15 @@
                     <h6>Assuming liquid occupies 50% of the cross-section</h6>
                     <div class="formula">$$ A_L = 1.178 \, D^2 $$</div>
                     <h6>For L/D = 3</h6>
-                    <div class="formula">$$ V_L = A_l \times L = 1.178 D^3 $$</div>
-                    <div class="formula">$$ D^3 = \frac{1656}{1.178} = 11.2 \, \mathrm{ft} $$</div>
-                    <h6>Accepted standard diameter: Dsep = 3.6 m</h6>
-                    <div class="formula">$$ L_{\mathrm{sep}} = \frac{V}{0.3927 \times D^2} $$</div>
+                    <div class="formula" data-js-new-liquid-vol>$$ V_L = A_l \times L $$</div>
+                    <div class="formula" data-js-diameter>$$ D = \frac{V_l}{A_L} $$</div>
                     <div class="formula">
-                      $$ L_{\mathrm{sep}} = \frac{1656}{0.3927 \times 11.2^2} = 33.7 \, \mathrm{ft}
-                      $$
+                      $$ L_{\mathrm{sep}} = \frac{V_l}{0.3927 \times D^2} $$
                     </div>
-                    <div class="formula">$$ L_{\mathrm{tt}} = 33.7 \, \mathrm{ft} $$</div>
+                    <div class="formula" data-js-length>
+                      <!-- $$ L_{\mathrm{sep}} = \frac{1656}{0.3927 \times 11.2^2} = 33.7 \, \mathrm{ft}
+                      $$ -->
+                    </div>
                   </li>
                   <li class="item">
                     Verification
