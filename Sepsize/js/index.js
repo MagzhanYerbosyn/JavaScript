@@ -107,7 +107,7 @@ sizingCalculateButton.addEventListener('click', (event) => {
 
   // 3.Minimum droplet size
   // minimum time velocity
-  const V_t_min = V_gas_max / 3;
+  const V_t_min = (V_gas_max / 3).toFixed(2);
 
   const velocityTMinFormula = `V_{\\mathrm{t,min}} = \\frac{v_{\\mathrm{gas}}}{\\frac{L}{D}} = \\frac{${V_gas_max}}{3} = ${V_t_min} \\, \\frac{\\mathrm{ft}}{\\mathrm{s}}`;
 
@@ -164,10 +164,18 @@ sizingCalculateButton.addEventListener('click', (event) => {
   // Gas Velocity
   const V_g = (Q_g_converted / A_g).toFixed(2);
 
-  const gasVelocityFormula = `v_{\\mathrm{g,act}} = \\frac{${Q_g_converted}}{${A_g}} = ${V_g} \\, \\frac{\\mathrm{ft}}{\\mathrm{s}} \\ll 2.46 \\, \\frac{\\mathrm{ft}}{\\mathrm{s}}`;
+  const gasVelocityCheckFormula = `v_{\\mathrm{g,act}} = \\frac{${Q_g_converted}}{${A_g}} = ${V_g} \\, \\frac{\\mathrm{ft}}{\\mathrm{s}} \\ll 2.46 \\, \\frac{\\mathrm{ft}}{\\mathrm{s}}`;
 
-  myKatexRender(gasVelocityFormula, gasVelocityElement);
+  myKatexRender(gasVelocityCheckFormula, gasVelocityCheckElement);
 
-  const passGradeFormula = `$$ v_{\\mathrm{g,act}} \\ll v_{\\mathrm{gas,max}} = ${V_g} \\,
-                      \\frac{\\mathrm{ft}}{\\mathrm{s}}`;
+  const passGradeFormula = `$$ v_{\\mathrm{g,act}} \\ll v_{\\mathrm{gas,max}} = ${V_g} \\, \\frac{\\mathrm{ft}}{\\mathrm{s}}`;
+
+  myKatexRender(passGradeFormula, passGradeElement);
+
+  // 7. Results
+  const lengthTTFormula = `L_{\\mathrm{tt}} = ${length} \\,  \\mathrm{ft}`;
+  const diameterSeparatorFormula = `D_{\\mathrm{sep}} = ${D} \\,  \\mathrm{ft}`;
+
+  myKatexRender(lengthTTFormula, lengthTTElement);
+  myKatexRender(diameterSeparatorFormula, diameterSeparatorElement);
 });
