@@ -33,3 +33,6 @@ const A_l = 1.178;
 const newLiquidVolElement = document.querySelector('[data-js-new-liquid-vol]');
 const diameterElement = document.querySelector('[data-js-diameter]');
 const lengthElement = document.querySelector('[data-js-length]');
+const areaElement = document.querySelector('[data-js-area]');
+const gasVelocityElement = document.querySelector('[data-js-gas-velocity]');
+const passGradeElement = document.querySelector('[data-js-pass-grade]');

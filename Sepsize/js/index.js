@@ -152,4 +152,22 @@ sizingCalculateButton.addEventListener('click', (event) => {
   const lengthFormula = `L_{\\mathrm{sep}} = \\frac{${V_l}}{0.3927 \\times ${D} ^2} = ${length} \\, \\mathrm{ft}`;
 
   myKatexRender(lengthFormula, lengthElement);
+
+  // 6. Verification
+  // Area
+  const A_g = (0.5 * ((Math.PI * Math.pow(D, 2)) / 4)).toFixed(2);
+
+  const areaFormula = `A_g = 0.5 \\times \\frac{3.14 \\times ${D}^2}{4} = ${A_g} \\, \\mathrm{ft}^2`;
+
+  myKatexRender(areaFormula, areaElement);
+
+  // Gas Velocity
+  const V_g = (Q_g_converted / A_g).toFixed(2);
+
+  const gasVelocityFormula = `v_{\\mathrm{g,act}} = \\frac{${Q_g_converted}}{${A_g}} = ${V_g} \\, \\frac{\\mathrm{ft}}{\\mathrm{s}} \\ll 2.46 \\, \\frac{\\mathrm{ft}}{\\mathrm{s}}`;
+
+  myKatexRender(gasVelocityFormula, gasVelocityElement);
+
+  const passGradeFormula = `$$ v_{\\mathrm{g,act}} \\ll v_{\\mathrm{gas,max}} = ${V_g} \\,
+                      \\frac{\\mathrm{ft}}{\\mathrm{s}}`;
 });
