@@ -3,6 +3,12 @@
 .header {
   background-color: $header-bg;
 
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   &__inner {
     color: $white;
     @include flex(flex-start, center);
@@ -39,6 +45,16 @@
         width: 70px;
         height: 48px;
       }
+    }
+  }
+
+  .kbtu-logo {
+    width: 400px;
+    height: 80px;
+
+    img {
+      width: 100%;
+      height: 100%;
     }
   }
 }

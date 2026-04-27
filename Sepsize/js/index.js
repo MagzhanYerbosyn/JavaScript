@@ -7,6 +7,8 @@ operatingInputsFormElement.addEventListener('submit', (event) => {
   // Getting data from module 1 inputs
   operatingInputs = new FormData(operatingInputsFormElement);
   console.log('Operating Inputs: ', Object.fromEntries(operatingInputs));
+
+  customAlert.alert('Data was successfully collected!');
 });
 
 flashInputsFormElement.addEventListener('submit', (event) => {
@@ -37,6 +39,8 @@ flashInputsFormElement.addEventListener('submit', (event) => {
 
   // Calculating SG
   SG.textContent = (sum / M_air).toFixed(1);
+
+  customAlert.alert('Flash results were successfully calculated!');
 });
 
 factorCalculateButton.addEventListener('click', (event) => {
@@ -61,6 +65,8 @@ factorCalculateButton.addEventListener('click', (event) => {
 
   // Calculation for Z factor
   Z.textContent = (Math.random() * (0.92 - 0.88) + 0.88).toFixed(2);
+
+  customAlert.alert('Five-step calculation were done!');
 });
 
 sizingCalculateButton.addEventListener('click', (event) => {
@@ -178,4 +184,6 @@ sizingCalculateButton.addEventListener('click', (event) => {
 
   myKatexRender(lengthTTFormula, lengthTTElement);
   myKatexRender(diameterSeparatorFormula, diameterSeparatorElement);
+
+  customAlert.alert('All calculations were done!');
 });
