@@ -438,10 +438,7 @@
                       $$ Q_{g(oper)} = Q_{g(std)} \times \frac{P_{std}}{P_{abs}} \times
                       \frac{T_{oper}}{T_{std}} $$
                     </div>
-                    <div class="formula" data-js-gas-oper>
-                      <!-- $$ Q_{g(oper)} = (0.86) \times \left( \frac{14.7}{290} \right) \times \left(
-                      \frac{573}{520} \right) = 0.0473 \text{ MMSCFD} = 0.547 \text{ ft}^3/s $$ -->
-                    </div>
+                    <div class="formula" data-js-gas-oper></div>
                   </li>
                   <li class="item">
                     Maximum allowable gas velocity (Souders-Brown)
@@ -452,10 +449,7 @@
                       $$ \rho_g = 2.7 \times \frac{SG \times P_{op}}{T_{op} \times Z} \left(
                       \frac{\text{lb}}{\text{ft}^3} \right) $$
                     </div>
-                    <div class="formula" data-js-gas-density>
-                      <!-- $$ \rho_g = 2.7 \times \frac{0.6 \times 290}{573 \times 0.92} = 0.89 \left(
-                      \frac{\text{lb}}{\text{ft}^3} \right) $$ -->
-                    </div>
+                    <div class="formula" data-js-gas-density></div>
                     <!-- GAS DENSITY -->
 
                     <!-- LIQUID DENSITY -->
@@ -464,10 +458,7 @@
                       $$ \rho_l = 62.4 \times \frac{141.5}{131.5 + API} \left(
                       \frac{\text{lb}}{\text{ft}^3} \right) $$
                     </div>
-                    <div class="formula" data-js-liquid-density>
-                      <!-- $$ \rho_l = 62.4 \times \frac{141.5}{131.5 + 24} = 56.8 \left(
-                      \frac{\text{lb}}{\text{ft}^3} \right) $$ -->
-                    </div>
+                    <div class="formula" data-js-liquid-density></div>
                     <!-- LIQUID DENSITY -->
 
                     <!-- GAS VELOCITY -->
@@ -475,27 +466,18 @@
                     <div class="formula">
                       $$ V_{gas,max} = K_{SB} \sqrt{\frac{\rho_L - \rho_g}{\rho_g}} $$
                     </div>
-                    <div class="formula" data-js-gas-velocity>
-                      <!-- $$ V_{\mathrm{gas,max}} = 0.197 \sqrt{\frac{56,8 - 0.89}{0.89}} = 1,56 \,
-                      \mathrm{ft/s} $$ -->
-                    </div>
+                    <div class="formula" data-js-gas-velocity></div>
                     <!-- GAS VELOCITY -->
                   </li>
                   <li class="item">
                     Minimum droplet size
                     <div class="formula">$$ V_t = \frac{d_p^2 (\rho_l - \rho_g) g}{18\mu_g} $$</div>
-                    <div class="formula" data-js-velocity-t>
-                      <!-- $$ V_{\mathrm{t,min}} = \frac{v_{\mathrm{gas}}}{\frac{L}{D}} = \frac{1.56}{3}
-                      = 0.52 \, \frac{\mathrm{ft}}{\mathrm{s}} $$ -->
-                    </div>
+                    <div class="formula" data-js-velocity-t></div>
                     <div class="formula">
                       $$ d_{\mathrm{p,min}} = \sqrt{\frac{18\mu_g \, v_{\mathrm{t,min}}}{(\rho_l -
                       \rho_g)g}} $$
                     </div>
-                    <div class="formula" data-js-min-part-diameter>
-                      <!-- $$ d_{\mathrm{p,min}} = \sqrt{\frac{18 \times 8.06 \times 10^{-6} \times
-                      0.52}{(56.8 - 0.89) \times 32.2}} = 2 \times 10^{-4} \mathrm{ft} $$ -->
-                    </div>
+                    <div class="formula" data-js-min-part-diameter></div>
                   </li>
                   <li class="item">
                     Liquid residence time
@@ -506,10 +488,7 @@
                       $$ \tau_{\mathrm{ret}} = 15 \, \mathrm{min} = 900 \, \mathrm{sec} $$
                     </div>
                     <div class="formula">$$ V_l = Q_l \times \tau_{\mathrm{ret}} $$</div>
-                    <div class="formula" data-js-liquid-volume>
-                      <!-- $$ V_L = \left( \frac{28300 \times 5.615}{86400} \right) \times 900 = 1656 \,
-                      \mathrm{ft}^3 $$ -->
-                    </div>
+                    <div class="formula" data-js-liquid-volume></div>
                   </li>
                   <li class="item">
                     Separator dimensions
@@ -521,24 +500,16 @@
                     <div class="formula">
                       $$ L_{\mathrm{sep}} = \frac{V_l}{0.3927 \times D^2} $$
                     </div>
-                    <div class="formula" data-js-length>
-                      <!-- $$ L_{\mathrm{sep}} = \frac{1656}{0.3927 \times 11.2^2} = 33.7 \, \mathrm{ft}
-                      $$ -->
-                    </div>
+                    <div class="formula" data-js-length></div>
                   </li>
                   <li class="item">
                     Verification
                     <h6>Area</h6>
                     <div class="formula">$$ A_g = 0.5 \times \frac{\pi D^2}{4} $$</div>
-                    <div class="formula" data-js-area>
-                      <!-- $$ A_g = 0.5 \times \frac{3.14 \times 11.2^2}{4} = 50.5 \, \mathrm{ft}^2 $$ -->
-                    </div>
+                    <div class="formula" data-js-area></div>
                     <h6>Gas Velocity</h6>
                     <div class="formula">$$ v_{\mathrm{g,act}} = \frac{Q_g}{A} $$</div>
-                    <div class="formula" data-js-gas-velocity-check>
-                      <!-- $$ v_{\mathrm{g,act}} = \frac{0.168}{50.5} = 0.0033 \,
-                      \frac{\mathrm{ft}}{\mathrm{s}} \ll 2.46 \, \frac{\mathrm{ft}}{\mathrm{s}} $$ -->
-                    </div>
+                    <div class="formula" data-js-gas-velocity-check></div>
                     <div class="formula" data-js-pass-grade>
                       $$ v_{\mathrm{g,act}} \ll v_{\mathrm{gas,max}} = 0.033 \,
                       \frac{\mathrm{ft}}{\mathrm{s}} $$
@@ -546,7 +517,6 @@
                     <div class="formula">
                       $$ \tau_{\mathrm{act}} = 17 \, \mathrm{min} \geq 15 \, \mathrm{min} $$
                     </div>
-                    <!-- <div class="formula">$$ \frac{L}{D} = 2.9 \, (\mathrm{range} \, 2 - 4) $$</div> -->
                   </li>
                   <li class="item">
                     Results
