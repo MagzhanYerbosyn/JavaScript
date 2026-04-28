@@ -1,37 +1,24 @@
-function CustomAlert() {
-  this.alert = function (message, title) {
-    document.body.innerHTML =
-      document.body.innerHTML +
-      '<div id="dialogoverlay"></div><div id="dialogbox" class="slit-in-vertical"><div><div id="dialogboxhead"></div><div id="dialogboxbody"></div><div id="dialogboxfoot"></div></div></div>';
+const customAlert = (title, body, type = false) => {
+  !type
+    ? document.body.insertAdjacentHTML(
+        'afterbegin',
+        `<div class="alert-blur" hidden="${type}">
+      <form class="alert-el">
+        <h5 class="alert-title">${title}</h5>
+        <p class="alert-body">${body}</p>
+        <input class="alert-input" name="OK" type="button" value="OK" />
+      </form>
+    </div>`
+      )
+    : getElement('alert-blur').remove();
+};
 
-    let dialogoverlay = document.getElementById('dialogoverlay');
-    let dialogbox = document.getElementById('dialogbox');
+const getElement = (className) => {
+  return document.querySelector(`.${className}`);
+};
 
-    let winH = window.innerHeight;
-    dialogoverlay.style.height = winH + 'px';
-
-    dialogbox.style.top = '100px';
-
-    dialogoverlay.style.display = 'block';
-    dialogbox.style.display = 'block';
-
-    document.getElementById('dialogboxhead').style.display = 'block';
-
-    if (typeof title === 'undefined') {
-      document.getElementById('dialogboxhead').style.display = 'none';
-    } else {
-      document.getElementById('dialogboxhead').innerHTML =
-        '<i class="fa fa-exclamation-circle" aria-hidden="true"></i> ' + title;
-    }
-    document.getElementById('dialogboxbody').innerHTML = message;
-    document.getElementById('dialogboxfoot').innerHTML =
-      '<button class="pure-material-button-contained active" onclick="customAlert.ok()">OK</button>';
-  };
-
-  this.ok = function () {
-    document.getElementById('dialogbox').style.display = 'none';
-    document.getElementById('dialogoverlay').style.display = 'none';
-  };
-}
-
-let customAlert = new CustomAlert();
+document.addEventListener('click', (event) => {
+  if (event.target === getElement('alert-blur') || event.target === getElement('alert-input')) {
+    customAlert('', '', true);
+  }
+});
