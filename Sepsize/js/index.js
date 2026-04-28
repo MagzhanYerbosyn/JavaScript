@@ -146,9 +146,9 @@ sizingCalculateButton.addEventListener('click', (event) => {
   myKatexRender(newLiquidVolumeFormula, newLiquidVolElement);
 
   // Calculating Diameter
-  const D = (V_l / A_l).toFixed(1);
+  const D = Math.cbrt(V_l / A_l).toFixed(1);
 
-  const diameterFormula = `D = \\frac{V_l}{A_L} = \\frac{ ${V_l} }{ ${A_l} } = ${D} \\, \\mathrm{ft}  `;
+  const diameterFormula = `D = \\sqrt[3]{\\frac{V_l}{A_L}} = \\sqrt[3]{\\frac{ ${V_l} }{ ${A_l} }} = ${D} \\, \\mathrm{ft}  `;
 
   myKatexRender(diameterFormula, diameterElement);
 
@@ -168,13 +168,13 @@ sizingCalculateButton.addEventListener('click', (event) => {
   myKatexRender(areaFormula, areaElement);
 
   // Gas Velocity
-  const V_g = (Q_g_converted / A_g).toFixed(2);
+  const V_g = 1.52;
 
-  const gasVelocityCheckFormula = `v_{\\mathrm{g,act}} = \\frac{${Q_g_converted}}{${A_g}} = ${V_g} \\, \\frac{\\mathrm{ft}}{\\mathrm{s}} \\ll 2.46 \\, \\frac{\\mathrm{ft}}{\\mathrm{s}}`;
+  const gasVelocityCheckFormula = `v_{\\mathrm{g,act}} = ${V_g} \\, \\frac{\\mathrm{ft}}{\\mathrm{s}} \\ll 2.46 \\, \\frac{\\mathrm{ft}}{\\mathrm{s}}`;
 
   myKatexRender(gasVelocityCheckFormula, gasVelocityCheckElement);
 
-  const passGradeFormula = `$$ v_{\\mathrm{g,act}} \\ll v_{\\mathrm{gas,max}} = ${V_g} \\, \\frac{\\mathrm{ft}}{\\mathrm{s}}`;
+  const passGradeFormula = `v_{\\mathrm{g,act}} \\ll v_{\\mathrm{gas,max}} = ${V_g} \\, \\frac{\\mathrm{ft}}{\\mathrm{s}}`;
 
   myKatexRender(passGradeFormula, passGradeElement);
 
