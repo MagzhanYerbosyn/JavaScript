@@ -10,7 +10,7 @@ operatingInputsFormElement.addEventListener('submit', (event) => {
   operatingInputs = new FormData(operatingInputsFormElement);
   console.log('Operating Inputs: ', Object.fromEntries(operatingInputs));
 
-  customAlert('Attention!', 'Data was successfully collected!');
+  customAlert('Success!', 'Data was successfully collected!');
 
   isInputsCalculated = true;
 });
@@ -44,7 +44,7 @@ flashInputsFormElement.addEventListener('submit', (event) => {
   // Calculating SG
   SG.textContent = (sum / M_air).toFixed(1);
 
-  customAlert('Attention!', 'Flash results were successfully calculated!');
+  customAlert('Success!', 'Flash results were successfully calculated!');
   isFlashCalculated = true;
 });
 
@@ -72,9 +72,9 @@ factorCalculateButton.addEventListener('click', (event) => {
     // Calculation for Z factor
     Z.textContent = (Math.random() * (0.92 - 0.88) + 0.88).toFixed(2);
 
-    customAlert('Attention!', 'Five-step calculation were done!');
+    customAlert('Success!', 'Five-step calculation were done!');
   } else {
-    customAlert('Attention!', 'The data has not been collected yet!');
+    customAlert('Error!', 'The data has not been collected yet!');
   }
 });
 
@@ -195,8 +195,8 @@ sizingCalculateButton.addEventListener('click', (event) => {
     myKatexRender(lengthTTFormula, lengthTTElement);
     myKatexRender(diameterSeparatorFormula, diameterSeparatorElement);
 
-    customAlert('Attention!', 'All calculations were done!');
+    customAlert('Success!', 'All calculations were done!');
   } else {
-    customAlert('Attention!', 'The data has not been collected yet!');
+    customAlert('Error!', 'The data has not been collected yet!');
   }
 });
