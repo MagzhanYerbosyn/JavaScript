@@ -26,8 +26,13 @@
       gap: 8px;
       white-space: nowrap;
 
-      &:hover {
+      &:hover:not(:disabled) {
         opacity: 0.8;
+      }
+
+      &:disabled {
+        opacity: 0.45;
+        cursor: not-allowed;
       }
     }
 

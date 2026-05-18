@@ -17,6 +17,10 @@ ul {
   list-style-type: none;
 }
 
+.active {
+  display: inline-block;
+}
+
 .sizing__inner .metric-value input, .flash__inner-content .table__body-items .table-row li:nth-child(3) input, .inputs__inner-content .content-list__item input {
   width: 150px;
   height: 40px;
@@ -803,8 +807,12 @@ ul {
   gap: 8px;
   white-space: nowrap;
 }
-.footer__inner .btn-cta:hover {
+.footer__inner .btn-cta:hover:not(:disabled) {
   opacity: 0.8;
+}
+.footer__inner .btn-cta:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
 }
 .footer__inner .btn-prev {
   background-color: #0e1a26;

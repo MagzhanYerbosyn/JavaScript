@@ -39,3 +39,8 @@ const gasVelocityCheckElement = document.querySelector('[data-js-gas-velocity-ch
 const passGradeElement = document.querySelector('[data-js-pass-grade]');
 const lengthTTElement = document.querySelector('[data-js-length-tt]');
 const diameterSeparatorElement = document.querySelector('[data-js-diameter-sep]');
+
+// Sizing wizard pagination
+const sizingSections = document.querySelectorAll('section.sizing');
+const sizingPrevButton = document.querySelector('[data-js-sizing-prev]');
+const sizingNextButton = document.querySelector('[data-js-sizing-next]');
