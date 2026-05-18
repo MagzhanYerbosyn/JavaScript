@@ -782,7 +782,8 @@ ul {
 }
 
 .footer {
-  padding: 22px 38px;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 .footer__inner {
   background-color: #1a2b3c;
