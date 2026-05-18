@@ -2,6 +2,8 @@
 
 .sizing {
   margin-top: 30px;
+  border: 1px solid $border-card;
+  border-radius: 10px;
 
   &__inner {
     padding: 22px 38px;
@@ -12,53 +14,418 @@
 
     &-form {
       width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
     }
 
     &-head {
       width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
-      h2 {
-        font-size: 18px;
+      &-left {
+        display: flex;
+        align-items: center;
+        gap: 16px;
       }
-    }
 
-    &-btn {
-      input {
-        margin-top: 16px;
-        @extend %button;
-        &:hover {
-          font-size: 19px;
-          transform: translateY(-3px);
-          box-shadow: 0px 0px 10px 3px $button-bg;
+      &-icon {
+        width: 52px;
+        height: 52px;
+        padding: 8px;
+        background: #1a3040;
+        border: 1px solid #2a4060;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          width: 100%;
+          height: 100%;
         }
-        &:active {
-          opacity: 1.2;
-        }
+      }
+
+      &-title {
+        font-size: 26px;
+        font-weight: 700;
+        color: $text-primary;
+        line-height: 1.2;
+      }
+
+      &-subtitle {
+        font-size: 13px;
+        color: $text-secondary;
+        margin-top: 2px;
       }
     }
 
     &-content {
-      .items-list {
-        .item {
-          margin-top: 24px;
-          margin-left: 10%;
-          background-color: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
 
-          .formula {
-            background-color: initial;
+      /* ─── SECTION CARD ─── */
+      .section-card {
+        background: $bg-card;
+        border: 1px solid $border-card;
+        border-radius: 10px;
+        padding: 20px;
+
+        .section-title {
+          font-size: 14px;
+          font-weight: 700;
+          color: $text-tertiary;
+          letter-spacing: 1.5px;
+          text-transform: uppercase;
+          margin-bottom: 16px;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+
+          &-icon {
+            width: 32px;
+            height: 32px;
           }
+        }
 
-          h6 {
-            font-size: 16px;
-            color: $paragraph;
-          }
+        /* ─── SECTION 1: INPUT SUMMARY ─── */
+        .input-grid {
+          display: grid;
+          grid-template-columns: repeat(7, 1fr);
+          gap: 12px;
+        }
 
-          math {
-            &:not(math:first-child) {
-              margin-top: 24px;
+        /* ─── PVT TABLE ─── */
+        .pvt-table {
+          width: 100%;
+          background: $bg-subcard;
+          border: 1px solid $border-sub;
+          border-radius: 8px;
+          padding: 12px;
+
+          .pvt-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 2px solid $border-card;
+            font-size: 13px;
+
+            .pvt-label {
+              color: $text-secondary;
+            }
+            .pvt-value {
+              color: $text-primary;
+              font-weight: 600;
+            }
+
+            &:last-child {
+              border-bottom: none;
             }
           }
         }
+
+        /* ─── SECTION 4: FOUR-COL CHECKS ─── */
+        .four-col {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 12px;
+
+          .check-card {
+            background: $bg-subcard;
+            border: 1px solid $border-sub;
+            border-radius: 8px;
+            padding: 14px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .check-header {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              margin-bottom: 12px;
+
+              .check-icon {
+                width: 34px;
+                height: 34px;
+                padding: 6px;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 16px;
+                flex-shrink: 0;
+
+                img {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+              .icon-blue {
+                background: #0d3280;
+              }
+              .icon-teal {
+                background: #0a3a38;
+              }
+              .icon-green {
+                background: #0f3a1a;
+              }
+              .icon-orange {
+                background: #4a1a00;
+              }
+              .check-title {
+                font-size: 13px;
+                font-weight: 600;
+                color: $text-primary;
+                line-height: 1.2;
+              }
+            }
+
+            .check-row {
+              display: flex;
+              justify-content: space-between;
+              padding: 5px 0;
+              font-size: 11px;
+              border-bottom: 1px solid #1a2535;
+
+              &-label {
+                color: $text-secondary;
+              }
+              &-value {
+                color: $text-primary;
+                font-weight: 600;
+              }
+            }
+          }
+        }
+
+        .check-note {
+          font-size: 11px;
+          color: $text-secondary;
+          margin-bottom: 8px;
+          line-height: 1.4;
+        }
+
+        /* ─── SECTION 5: TABLE ─── */
+        .data-table {
+          width: 100%;
+          border-collapse: collapse;
+
+          th {
+            text-align: left;
+            font-size: 12px;
+            font-weight: 600;
+            color: $text-secondary;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            padding: 10px 12px;
+            border-bottom: 1px solid $border-card;
+          }
+
+          td {
+            padding: 12px 12px;
+            font-size: 13px;
+            color: $text-primary;
+            border-bottom: 1px solid $border-card;
+          }
+
+          tr:last-child td {
+            border-bottom: none;
+          }
+
+          .row-recommended td {
+            color: $accent-yellow;
+            font-weight: 600;
+
+            &:first-child {
+              color: $accent-yellow;
+            }
+          }
+
+          .diff-neg {
+            color: $accent-diff-neg;
+            font-weight: 600;
+          }
+          .diff-ok {
+            color: $accent-green;
+          }
+        }
+      }
+
+      /* ─── TWO-COL GRID ─── */
+      .two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+
+      /* ─── SECTION 6: FINAL REC ─── */
+      .final-card {
+        border: 1px solid $border-final;
+        border-radius: 10px;
+        padding: 20px 24px;
+
+        .section-title {
+          font-size: 14px;
+          font-weight: 700;
+          color: $text-tertiary;
+          letter-spacing: 1.5px;
+          text-transform: uppercase;
+          margin-bottom: 16px;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+
+          &-icon {
+            width: 32px;
+            height: 32px;
+          }
+        }
+
+        .final-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          gap: 16px;
+          align-items: center;
+
+          .final-item {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .final-label {
+              font-size: 12px;
+              color: $text-secondary;
+              margin-bottom: 4px;
+            }
+
+            .final-value {
+              font-size: 36px;
+              font-weight: 700;
+              color: $accent-yellow;
+              line-height: 1;
+            }
+
+            .final-controlling {
+              font-size: 13px;
+              color: $text-primary;
+              font-weight: 600;
+              margin-top: 2px;
+            }
+          }
+        }
+      }
+
+      /* ─── STATUS BADGE ─── */
+      .badge {
+        display: inline-block;
+        padding: 3px 10px;
+        border-radius: 4px;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+
+        &-passed {
+          background: $accent-green-bg;
+          color: $accent-green;
+          border: 1px solid #1a5028;
+        }
+
+        &-acceptable {
+          background: $accent-green-bg;
+          color: $accent-green;
+          border: 1px solid #1a5028;
+        }
+        &-corrected {
+          background: $accent-orange-bg;
+          color: $accent-orange;
+          border: 1px solid #5a3000;
+        }
+        &-preferred {
+          background: $accent-preferred-bg;
+          color: $accent-preferred;
+          border: 1px solid #1a3a6e;
+        }
+        &-calculated {
+          background: $accent-green-bg;
+          color: $accent-green;
+          border: 1px solid #1a5028;
+        }
+      }
+
+      // .items-list {
+      //   .item {
+      //     margin-top: 24px;
+      //     margin-left: 10%;
+      //     background-color: none;
+
+      //     .formula {
+      //       background-color: initial;
+      //     }
+
+      //     h6 {
+      //       font-size: 16px;
+      //       color: $paragraph;
+      //     }
+
+      //     math {
+      //       &:not(math:first-child) {
+      //         margin-top: 24px;
+      //       }
+      //     }
+      //   }
+      // }
+    }
+
+    .metric-item {
+      background: $bg-subcard;
+      border: 1px solid $border-sub;
+      border-radius: 8px;
+      padding: 14px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .metric-label {
+      font-size: 14px;
+      color: $text-secondary;
+      line-height: 1.3;
+    }
+    .metric-value {
+      font-size: 20px;
+      font-weight: 700;
+      color: $text-primary;
+      line-height: 1.1;
+    }
+    .metric-unit {
+      font-size: 12px;
+      color: $text-secondary;
+    }
+    .btn-cta {
+      background: $accent-yellow;
+      color: #0d1117;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 22px;
+      font-size: 14px;
+      font-weight: 700;
+      font-family: inherit;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+
+      &:hover {
+        background: #e09900;
       }
     }
   }

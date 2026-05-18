@@ -181,183 +181,6 @@
           </div>
         </section>
 
-        <section class="flash">
-          <div class="flash__inner">
-            <form class="flash__inner-form" data-js-flash-inputs>
-              <!-- FLASH HEAD -->
-              <div class="flash__inner-head">
-                <div class="title"><h2>Module 2 — PVT / Flash Calculation</h2></div>
-                <div class="paragraphs">
-                  <p class="paragraph">Define gas composition and review flash results</p>
-                  <p class="paragraph">Editable table — mole fractions in %</p>
-                </div>
-              </div>
-              <!-- FLASH HEAD -->
-
-              <!-- FLASH CONTENT -->
-              <div class="flash__inner-content">
-                <div class="table">
-                  <!-- TABLE HEAD -->
-                  <div class="table__head">
-                    <ul class="head__list">
-                      <li>Component</li>
-                      <li>Formula</li>
-                      <li>Mole Fraction (%)</li>
-                      <li>Molecular Weight (g/mol)</li>
-                      <li>yi * Mi</li>
-                    </ul>
-                  </div>
-                  <!-- TABLE HEAD -->
-
-                  <!-- TABLE BODY -->
-                  <ul class="table__body">
-                    <li class="table__body-items">
-                      <ul class="table-row">
-                        <li data-js-component>Carbon Dioxide</li>
-                        <li data-js-formula>CO2</li>
-                        <li data-js-moleFraction>
-                          <input type="number" step="any" name="Carbon Dioxide" required />
-                        </li>
-                        <li data-js-molecularWeight>44.01</li>
-                        <li data-js-yi-Mi>0</li>
-                      </ul>
-                    </li>
-                    <li class="table__body-items">
-                      <ul class="table-row">
-                        <li data-js-component>Nitrogen</li>
-                        <li data-js-formula>N2</li>
-                        <li data-js-moleFraction>
-                          <input type="number" step="any" name="Nitrogen" required />
-                        </li>
-                        <li data-js-molecularWeight>28.01</li>
-                        <li data-js-yi-Mi>0</li>
-                      </ul>
-                    </li>
-                    <li class="table__body-items">
-                      <ul class="table-row">
-                        <li data-js-component>Methane</li>
-                        <li data-js-formula>CH4</li>
-                        <li data-js-moleFraction>
-                          <input type="number" step="any" name="Methane" required />
-                        </li>
-                        <li data-js-molecularWeight>16.04</li>
-                        <li data-js-yi-Mi>0</li>
-                      </ul>
-                    </li>
-                    <li class="table__body-items">
-                      <ul class="table-row">
-                        <li data-js-component>Ethane</li>
-                        <li data-js-formula>C2H6</li>
-                        <li data-js-moleFraction>
-                          <input type="number" step="any" name="Ethane" required />
-                        </li>
-                        <li data-js-molecularWeight>30.07</li>
-                        <li data-js-yi-Mi>0</li>
-                      </ul>
-                    </li>
-                    <li class="table__body-items">
-                      <ul class="table-row">
-                        <li data-js-component>Propane</li>
-                        <li data-js-formula>C3H8</li>
-                        <li data-js-moleFraction>
-                          <input type="number" step="any" name="Propane" required />
-                        </li>
-                        <li data-js-molecularWeight>44.10</li>
-                        <li data-js-yi-Mi>0</li>
-                      </ul>
-                    </li>
-                    <li class="table__body-items">
-                      <ul class="table-row">
-                        <li data-js-component>Isobutane</li>
-                        <li data-js-formula>i-C4H10</li>
-                        <li data-js-moleFraction>
-                          <input type="number" step="any" name="Isobutane" required />
-                        </li>
-                        <li data-js-molecularWeight>58.12</li>
-                        <li data-js-yi-Mi>0</li>
-                      </ul>
-                    </li>
-                    <li class="table__body-items">
-                      <ul class="table-row">
-                        <li data-js-component>n-Butane</li>
-                        <li data-js-formula>n-C4H10</li>
-                        <li data-js-moleFraction>
-                          <input type="number" step="any" name="n-Butane" required />
-                        </li>
-                        <li data-js-molecularWeight>58.12</li>
-                        <li data-js-yi-Mi>0</li>
-                      </ul>
-                    </li>
-                    <li class="table__body-items">
-                      <ul class="table-row">
-                        <li data-js-component>Isopentane</li>
-                        <li data-js-formula>i-C5H12</li>
-                        <li data-js-moleFraction>
-                          <input type="number" step="any" name="Isopentane" required />
-                        </li>
-                        <li data-js-molecularWeight>72.15</li>
-                        <li data-js-yi-Mi>0</li>
-                      </ul>
-                    </li>
-                    <li class="table__body-items">
-                      <ul class="table-row">
-                        <li data-js-component>n-Pentane</li>
-                        <li data-js-formula>n-C5H12</li>
-                        <li data-js-moleFraction>
-                          <input type="number" step="any" name="n-Pentane" required />
-                        </li>
-                        <li data-js-molecularWeight>72.15</li>
-                        <li data-js-yi-Mi>0</li>
-                      </ul>
-                    </li>
-                    <li class="table__body-items">
-                      <ul class="table-row">
-                        <li data-js-component>Hexanes</li>
-                        <li data-js-formula>C6+</li>
-                        <li data-js-moleFraction>
-                          <input type="number" step="any" name="Hexanes" required />
-                        </li>
-                        <li data-js-molecularWeight>86.00*</li>
-                        <li data-js-yi-Mi>0</li>
-                      </ul>
-                    </li>
-                  </ul>
-                  <!-- TABLE BODY -->
-
-                  <!-- TABLE FOOT -->
-                  <div class="table__foot">
-                    <div class="card">
-                      <h5>M_gas</h5>
-                      <span data-js-M-gas>0 <span>g/mol</span></span>
-                      <p>Calculated weighted molar mass of the gas mixture</p>
-                    </div>
-
-                    <div class="card">
-                      <h5>SG</h5>
-                      <span data-js-SG>0</span>
-                      <p>Specific gravity relative to air (air = 28.97 g/mol)</p>
-                    </div>
-
-                    <div class="card">
-                      <h5>Viscosity</h5>
-                      <span data-js-viscosity>0.012</span><span>cP</span>
-                      <p>Estimated gas viscosity at operating conditions</p>
-                    </div>
-                  </div>
-                  <!-- TABLE FOOT -->
-                </div>
-              </div>
-              <!-- FLASH CONTENT -->
-
-              <!-- FLASH BUTTON -->
-              <div class="flash__inner-btn">
-                <input type="submit" value="Calculate" />
-              </div>
-              <!-- FLASH BUTTON -->
-            </form>
-          </div>
-        </section>
-
         <section class="factor">
           <div class="factor__inner">
             <form class="factor__inner-form">
@@ -421,109 +244,554 @@
             <form class="sizing__inner-form">
               <!-- FACTOR HEAD -->
               <div class="sizing__inner-head">
-                <h2>Module 4 — Separator Sizing</h2>
+                <div class="sizing__inner-head-left">
+                  <div>
+                    <div class="sizing__inner-head-title">Module 1 – Input data</div>
+                    <div class="sizing__inner-head-subtitle">
+                      Step 1 of 3: Flow and Properties Review
+                    </div>
+                  </div>
+                </div>
               </div>
               <!-- FACTOR HEAD -->
 
-              <div class="sizing__inner-btn">
-                <input type="button" value="Start Calculating" data-js-sizing-calculate />
-              </div>
-
               <!-- FACTOR CONTENT -->
               <div class="sizing__inner-content">
-                <ol class="items-list">
-                  <li class="item">
-                    Gas flow rate at operationg conditions
-                    <div class="formula">
-                      $$ Q_{g(oper)} = Q_{g(std)} \times \frac{P_{std}}{P_{abs}} \times
-                      \frac{T_{oper}}{T_{std}} $$
+                <!-- SECTION 1: INPUT SUMMARY -->
+                <div class="section-card">
+                  <div class="section-title">
+                    <img
+                      class="section-title-icon"
+                      src="./img/sizing_section/google-docs.png"
+                      alt="document icon"
+                    />
+                    Key operating conditions and flow rates
+                  </div>
+                  <div class="input-grid">
+                    <div class="metric-item">
+                      <div class="metric-label">Operating Pressure</div>
+                      <div class="metric-value">290</div>
+                      <div class="metric-unit">psia</div>
                     </div>
-                    <div class="formula" data-js-gas-oper></div>
-                  </li>
-                  <li class="item">
-                    Maximum allowable gas velocity (Souders-Brown)
+                    <div class="metric-item">
+                      <div class="metric-label">Operating Temperature</div>
+                      <div class="metric-value">113</div>
+                      <div class="metric-unit">°F</div>
+                    </div>
+                    <div class="metric-item">
+                      <div class="metric-label">Standard Pressure</div>
+                      <div class="metric-value">14.7</div>
+                      <div class="metric-unit">psia</div>
+                    </div>
+                    <div class="metric-item">
+                      <div class="metric-label">Standard Temperature</div>
+                      <div class="metric-value">60</div>
+                      <div class="metric-unit">°F</div>
+                    </div>
+                    <div class="metric-item">
+                      <div class="metric-label">Gas Flow Rate</div>
+                      <div class="metric-value">0.86</div>
+                      <div class="metric-unit">MMSCFD</div>
+                    </div>
+                    <div class="metric-item">
+                      <div class="metric-label">Total Liquid Rate</div>
+                      <div class="metric-value">28,300</div>
+                      <div class="metric-unit">bbl/day</div>
+                    </div>
+                    <div class="metric-item">
+                      <div class="metric-label">Water Flow Rate</div>
+                      <div class="metric-value">19,800</div>
+                      <div class="metric-unit">bbl/day</div>
+                    </div>
+                    <div class="metric-item">
+                      <div class="metric-label">Oil Flow Rate</div>
+                      <div class="metric-value">8,490</div>
+                      <div class="metric-unit">bbl/day</div>
+                    </div>
+                    <div class="metric-item">
+                      <div class="metric-label">Water Cut</div>
+                      <div class="metric-value">70</div>
+                      <div class="metric-unit">%</div>
+                    </div>
+                    <div class="metric-item">
+                      <div class="metric-label">Droplet Size</div>
+                      <div class="metric-value">140</div>
+                      <div class="metric-unit">μm</div>
+                    </div>
+                    <div class="metric-item">
+                      <div class="metric-label">API Gravity</div>
+                      <div class="metric-value">21.9</div>
+                      <div class="metric-unit">&nbsp;</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- SECTION 1: INPUT SUMMARY -->
 
-                    <!-- GAS DENSITY -->
-                    <h6>2.1 Gas Density</h6>
-                    <div class="formula">
-                      $$ \rho_g = 2.7 \times \frac{SG \times P_{op}}{T_{op} \times Z} \left(
-                      \frac{\text{lb}}{\text{ft}^3} \right) $$
-                    </div>
-                    <div class="formula" data-js-gas-density></div>
-                    <!-- GAS DENSITY -->
+                <!-- FLASH CALCULATION -->
+                <div class="flash section-card">
+                  <div class="section-title">
+                    <img
+                      class="section-title-icon"
+                      src="./img/sizing_section/google-docs.png"
+                      alt="document icon"
+                    />
+                    Define gas composition and review flash results
+                  </div>
 
-                    <!-- LIQUID DENSITY -->
-                    <h6>2.2 Liquid Density</h6>
-                    <div class="formula">
-                      $$ \rho_l = 62.4 \times \frac{141.5}{131.5 + API} \left(
-                      \frac{\text{lb}}{\text{ft}^3} \right) $$
-                    </div>
-                    <div class="formula" data-js-liquid-density></div>
-                    <!-- LIQUID DENSITY -->
+                  <div class="flash__inner">
+                    <form class="flash__inner-form" data-js-flash-inputs>
+                      <!-- FLASH CONTENT -->
+                      <div class="flash__inner-content">
+                        <div class="table">
+                          <!-- TABLE HEAD -->
+                          <div class="table__head">
+                            <ul class="head__list">
+                              <li class="metric-label">Component</li>
+                              <li class="metric-label">Formula</li>
+                              <li class="metric-label">Mole Fraction (%)</li>
+                              <li class="metric-label">Molecular Weight (g/mol)</li>
+                              <li class="metric-label">yi * Mi</li>
+                            </ul>
+                          </div>
+                          <!-- TABLE HEAD -->
 
-                    <!-- GAS VELOCITY -->
-                    <h6>2.3 Gas Velocity (Sounders-Brown)</h6>
-                    <div class="formula">
-                      $$ V_{gas,max} = K_{SB} \sqrt{\frac{\rho_L - \rho_g}{\rho_g}} $$
+                          <!-- TABLE BODY -->
+                          <ul class="table__body">
+                            <li class="table__body-items">
+                              <ul class="table-row">
+                                <li data-js-component>Carbon Dioxide</li>
+                                <li data-js-formula>CO2</li>
+                                <li data-js-moleFraction>
+                                  <input type="number" step="any" name="Carbon Dioxide" required />
+                                </li>
+                                <li data-js-molecularWeight>44.01</li>
+                                <li data-js-yi-Mi>0</li>
+                              </ul>
+                            </li>
+                            <li class="table__body-items">
+                              <ul class="table-row">
+                                <li data-js-component>Nitrogen</li>
+                                <li data-js-formula>N2</li>
+                                <li data-js-moleFraction>
+                                  <input type="number" step="any" name="Nitrogen" required />
+                                </li>
+                                <li data-js-molecularWeight>28.01</li>
+                                <li data-js-yi-Mi>0</li>
+                              </ul>
+                            </li>
+                            <li class="table__body-items">
+                              <ul class="table-row">
+                                <li data-js-component>Methane</li>
+                                <li data-js-formula>CH4</li>
+                                <li data-js-moleFraction>
+                                  <input type="number" step="any" name="Methane" required />
+                                </li>
+                                <li data-js-molecularWeight>16.04</li>
+                                <li data-js-yi-Mi>0</li>
+                              </ul>
+                            </li>
+                            <li class="table__body-items">
+                              <ul class="table-row">
+                                <li data-js-component>Ethane</li>
+                                <li data-js-formula>C2H6</li>
+                                <li data-js-moleFraction>
+                                  <input type="number" step="any" name="Ethane" required />
+                                </li>
+                                <li data-js-molecularWeight>30.07</li>
+                                <li data-js-yi-Mi>0</li>
+                              </ul>
+                            </li>
+                            <li class="table__body-items">
+                              <ul class="table-row">
+                                <li data-js-component>Propane</li>
+                                <li data-js-formula>C3H8</li>
+                                <li data-js-moleFraction>
+                                  <input type="number" step="any" name="Propane" required />
+                                </li>
+                                <li data-js-molecularWeight>44.10</li>
+                                <li data-js-yi-Mi>0</li>
+                              </ul>
+                            </li>
+                            <li class="table__body-items">
+                              <ul class="table-row">
+                                <li data-js-component>Isobutane</li>
+                                <li data-js-formula>i-C4H10</li>
+                                <li data-js-moleFraction>
+                                  <input type="number" step="any" name="Isobutane" required />
+                                </li>
+                                <li data-js-molecularWeight>58.12</li>
+                                <li data-js-yi-Mi>0</li>
+                              </ul>
+                            </li>
+                            <li class="table__body-items">
+                              <ul class="table-row">
+                                <li data-js-component>n-Butane</li>
+                                <li data-js-formula>n-C4H10</li>
+                                <li data-js-moleFraction>
+                                  <input type="number" step="any" name="n-Butane" required />
+                                </li>
+                                <li data-js-molecularWeight>58.12</li>
+                                <li data-js-yi-Mi>0</li>
+                              </ul>
+                            </li>
+                            <li class="table__body-items">
+                              <ul class="table-row">
+                                <li data-js-component>Isopentane</li>
+                                <li data-js-formula>i-C5H12</li>
+                                <li data-js-moleFraction>
+                                  <input type="number" step="any" name="Isopentane" required />
+                                </li>
+                                <li data-js-molecularWeight>72.15</li>
+                                <li data-js-yi-Mi>0</li>
+                              </ul>
+                            </li>
+                            <li class="table__body-items">
+                              <ul class="table-row">
+                                <li data-js-component>n-Pentane</li>
+                                <li data-js-formula>n-C5H12</li>
+                                <li data-js-moleFraction>
+                                  <input type="number" step="any" name="n-Pentane" required />
+                                </li>
+                                <li data-js-molecularWeight>72.15</li>
+                                <li data-js-yi-Mi>0</li>
+                              </ul>
+                            </li>
+                            <li class="table__body-items">
+                              <ul class="table-row">
+                                <li data-js-component>Hexanes</li>
+                                <li data-js-formula>C6+</li>
+                                <li data-js-moleFraction>
+                                  <input type="number" step="any" name="Hexanes" required />
+                                </li>
+                                <li data-js-molecularWeight>86.00*</li>
+                                <li data-js-yi-Mi>0</li>
+                              </ul>
+                            </li>
+                          </ul>
+                          <!-- TABLE BODY -->
+
+                          <!-- TABLE FOOT -->
+                          <div class="table__foot">
+                            <div class="card">
+                              <h5>M_gas</h5>
+                              <span data-js-M-gas>0 <span>g/mol</span></span>
+                              <p>Calculated weighted molar mass of the gas mixture</p>
+                            </div>
+
+                            <div class="card">
+                              <h5>SG</h5>
+                              <span data-js-SG>0</span>
+                              <p>Specific gravity relative to air (air = 28.97 g/mol)</p>
+                            </div>
+
+                            <div class="card">
+                              <h5>Viscosity</h5>
+                              <span data-js-viscosity>0.012</span><span>cP</span>
+                              <p>Estimated gas viscosity at operating conditions</p>
+                            </div>
+                          </div>
+                          <!-- TABLE FOOT -->
+                        </div>
+                      </div>
+                      <!-- FLASH CONTENT -->
+
+                      <!-- FLASH BUTTON -->
+                      <div class="flash__inner-btn">
+                        <input type="submit" value="Calculate" />
+                      </div>
+                      <!-- FLASH BUTTON -->
+                    </form>
+                  </div>
+                </div>
+                <!-- FLASH CALCULATION -->
+
+                <!-- SECTIONS 2 + 3 -->
+                <div class="two-col">
+                  <!-- PVT / GAS PROPERTIES -->
+                  <div class="section-card">
+                    <div class="section-title">
+                      <img src="./img/sizing_section/cloud-icon.png" alt="cloud icon" /> PVT / GAS
+                      PROPERTIES
                     </div>
-                    <div class="formula" data-js-gas-velocity></div>
-                    <!-- GAS VELOCITY -->
-                  </li>
-                  <li class="item">
-                    Minimum droplet size
-                    <div class="formula">$$ V_t = \frac{d_p^2 (\rho_l - \rho_g) g}{18\mu_g} $$</div>
-                    <div class="formula" data-js-velocity-t></div>
-                    <div class="formula">
-                      $$ d_{\mathrm{p,min}} = \sqrt{\frac{18\mu_g \, v_{\mathrm{t,min}}}{(\rho_l -
-                      \rho_g)g}} $$
+                    <div class="pvt-table">
+                      <div class="pvt-row">
+                        <span class="pvt-label">Gas Specific Gravity</span
+                        ><span class="pvt-value">0.60</span>
+                      </div>
+                      <div class="pvt-row">
+                        <span class="pvt-label">Z-Factor</span><span class="pvt-value">0.92</span>
+                      </div>
+                      <div class="pvt-row">
+                        <span class="pvt-label">Gas Density</span
+                        ><span class="pvt-value">0.89 lb/ft³</span>
+                      </div>
+                      <div class="pvt-row">
+                        <span class="pvt-label">Status</span
+                        ><span><span class="badge badge-calculated">CALCULATED</span></span>
+                      </div>
                     </div>
-                    <div class="formula" data-js-min-part-diameter></div>
-                  </li>
-                  <li class="item">
-                    Liquid residence time
-                    <h6>
-                      According to the GPSA Engineering Data standard Book for high viscosity oil:
-                    </h6>
-                    <div class="formula">
-                      $$ \tau_{\mathrm{ret}} = 15 \, \mathrm{min} = 900 \, \mathrm{sec} $$
+                  </div>
+                  <!-- LIQUID PROPERTIES -->
+                  <div class="section-card">
+                    <div class="section-title">
+                      <img src="./img/sizing_section/droplet-icon.png" alt="droplet icon" />
+                      LIQUID PROPERTIES
                     </div>
-                    <div class="formula">$$ V_l = Q_l \times \tau_{\mathrm{ret}} $$</div>
-                    <div class="formula" data-js-liquid-volume></div>
-                  </li>
-                  <li class="item">
-                    Separator dimensions
-                    <h6>Assuming liquid occupies 50% of the cross-section</h6>
-                    <div class="formula">$$ A_L = 1.178 \, D^2 $$</div>
-                    <h6>For L/D = 3</h6>
-                    <div class="formula" data-js-new-liquid-vol>$$ V_L = A_l \times L $$</div>
-                    <div class="formula" data-js-diameter>$$ D = \sqrt[3]{\frac{V_l}{A_L}} $$</div>
-                    <div class="formula">
-                      $$ L_{\mathrm{sep}} = \frac{V_l}{0.3927 \times D^2} $$
+                    <div class="pvt-table">
+                      <div class="pvt-row">
+                        <span class="pvt-label">Oil Density</span
+                        ><span class="pvt-value">57.6 lb/ft³</span>
+                      </div>
+                      <div class="pvt-row">
+                        <span class="pvt-label">Estimated Mixture Density</span
+                        ><span class="pvt-value">61.0 lb/ft³</span>
+                      </div>
+                      <div class="pvt-row">
+                        <span class="pvt-label">Water Cut</span><span class="pvt-value">70 %</span>
+                      </div>
+                      <div class="pvt-row">
+                        <span class="pvt-label">Status</span
+                        ><span><span class="badge badge-calculated">CALCULATED</span></span>
+                      </div>
                     </div>
-                    <div class="formula" data-js-length></div>
-                  </li>
-                  <li class="item">
-                    Verification
-                    <h6>Area</h6>
-                    <div class="formula">$$ A_g = 0.5 \times \frac{\pi D^2}{4} $$</div>
-                    <div class="formula" data-js-area></div>
-                    <h6>Gas Velocity</h6>
-                    <div class="formula">$$ v_{\mathrm{g,act}} = \frac{Q_g}{A} $$</div>
-                    <div class="formula" data-js-gas-velocity-check></div>
-                    <div class="formula" data-js-pass-grade>
-                      $$ v_{\mathrm{g,act}} \ll v_{\mathrm{gas,max}} = 0.033 \,
-                      \frac{\mathrm{ft}}{\mathrm{s}} $$
+                  </div>
+                </div>
+                <!-- SECTIONS 2 + 3 -->
+              </div>
+              <!-- FACTOR CONTENT -->
+            </form>
+          </div>
+        </section>
+
+        <section class="sizing">
+          <div class="sizing__inner">
+            <form class="sizing__inner-form">
+              <!-- FACTOR CONTENT -->
+              <div class="sizing__inner-content">
+                <!-- FACTOR HEAD -->
+                <div class="sizing__inner-head">
+                  <div class="sizing__inner-head-left">
+                    <div>
+                      <div class="sizing__inner-head-title">
+                        Module 2 – Advanced separation performance
+                      </div>
+                      <div class="sizing__inner-head-subtitle">Step 2 of 3: Performance Checks</div>
                     </div>
-                    <div class="formula">
-                      $$ \tau_{\mathrm{act}} = 17 \, \mathrm{min} \geq 15 \, \mathrm{min} $$
+                  </div>
+                </div>
+                <!-- FACTOR HEAD -->
+
+                <!-- SECTION 4: ADVANCED SEPARATION -->
+                <div class="two-col">
+                  <!-- DROPLET SETTLING CHECK -->
+                  <div class="section-card">
+                    <div class="section-title">
+                      <img src="./img/sizing_section/water-cycle.png" alt="droplet settling icon" />
+                      1. Droplet Settling Check
                     </div>
-                  </li>
-                  <li class="item">
-                    Results
-                    <div class="formula" data-js-length-tt></div>
-                    <div class="formula" data-js-diameter-sep></div>
-                  </li>
-                </ol>
+                    <div class="pvt-table">
+                      <div class="pvt-row">
+                        <span class="pvt-label">Design droplet size</span
+                        ><span class="pvt-value">140 μm</span>
+                      </div>
+                      <div class="pvt-row">
+                        <span class="pvt-label">Terminal settling velocity</span
+                        ><span class="pvt-value">1.03 ft/s</span>
+                      </div>
+                      <div class="pvt-row">
+                        <span class="pvt-label">Settling condition</span
+                        ><span class="pvt-value">Acceptable</span>
+                      </div>
+                      <div class="pvt-row">
+                        <span class="pvt-label">Status</span
+                        ><span><span class="badge badge-calculated">PASSED</span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- DRAG REGIME CHECK -->
+                  <div class="section-card">
+                    <div class="section-title">
+                      <img src="./img/sizing_section/waves-icon.png" alt="waves icon" /> 2. Drag
+                      Regime Check
+                    </div>
+                    <div class="pvt-table">
+                      <div class="pvt-row">
+                        <span class="pvt-label">Reynolds number</span
+                        ><span class="pvt-value">48</span>
+                      </div>
+                      <div class="pvt-row">
+                        <span class="pvt-label">Drag coefficient</span
+                        ><span class="pvt-value">1.27</span>
+                      </div>
+                      <div class="pvt-row">
+                        <span class="pvt-label">Flow regime</span
+                        ><span class="pvt-value">Non-Stokes</span>
+                      </div>
+                      <div class="pvt-row">
+                        <span class="pvt-label">Status</span
+                        ><span><span class="badge badge-calculated">CORRECTED</span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- RE-ENTRAINMENT RISK -->
+                  <div class="section-card">
+                    <div class="section-title">
+                      <img src="./img/sizing_section/shielded.png" alt="shield icon" />
+                      3. Re-entrainment Risk
+                    </div>
+                    <div class="pvt-table">
+                      <div class="pvt-row">
+                        <span class="pvt-label">Risk level</span><span class="pvt-value">Low</span>
+                      </div>
+                      <div class="pvt-row">
+                        <span class="pvt-label">Gas velocity</span
+                        ><span class="pvt-value">Within allowable limit</span>
+                      </div>
+                      <div class="pvt-row">
+                        <span class="pvt-label">Margin</span><span class="pvt-value">Safe</span>
+                      </div>
+                      <div class="pvt-row">
+                        <span class="pvt-label">Status</span
+                        ><span><span class="badge badge-calculated">PASSED</span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- LIQUID RETENTION TIME -->
+                  <div class="section-card">
+                    <div class="section-title">
+                      <img src="./img/sizing_section/wall-clock.png" alt="clock icon" /> 4. Liquid
+                      Retention Time
+                    </div>
+                    <div class="pvt-table">
+                      <div class="pvt-row">
+                        <span class="pvt-label">Retention time</span
+                        ><span class="pvt-value">15 min</span>
+                      </div>
+                      <div class="pvt-row">
+                        <span class="pvt-label">Condition</span
+                        ><span class="pvt-value">Suitable for high viscosity oil</span>
+                      </div>
+                      <div class="pvt-row">
+                        <span class="pvt-label">Residence condition</span
+                        ><span class="pvt-value">Acceptable</span>
+                      </div>
+                      <div class="pvt-row">
+                        <span class="pvt-label">Status</span
+                        ><span><span class="badge badge-calculated">ACCEPTABLE</span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- SECTION 4: ADVANCED SEPARATION -->
+
+                <!-- ASSUMPTIONS -->
+                <div class="section-card">
+                  <div class="section-title">
+                    <img src="./img/sizing_section/ruler.png" alt="ruler icon" /> ASSUMPTIONS
+                  </div>
+                  <ul class="pvt-table">
+                    <li class="pvt-row">
+                      <span class="pvt-value">
+                        Liquid occupies 50% of the vessel cross-section
+                      </span>
+                    </li>
+                    <li class="pvt-row">
+                      <span class="pvt-value"> Horizontal two-phase separator is considered </span>
+                    </li>
+                    <li class="pvt-row">
+                      <span class="pvt-value">
+                        Drag-based correction is applied for droplet settling verification
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <!-- ASSUMPTIONS -->
+              </div>
+              <!-- FACTOR CONTENT -->
+            </form>
+          </div>
+        </section>
+
+        <section class="sizing">
+          <div class="sizing__inner">
+            <form class="sizing__inner-form">
+              <!-- FACTOR CONTENT -->
+              <div class="sizing__inner-content">
+                <!-- FACTOR HEAD -->
+                <div class="sizing__inner-head">
+                  <div class="sizing__inner-head-left">
+                    <div>
+                      <div class="sizing__inner-head-title">Module 3 – Separator Sizing</div>
+                      <div class="sizing__inner-head-subtitle">
+                        Step 3 of 3: Final Recommendation
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- FACTOR HEAD -->
+
+                <!-- SECTION 5: SEPARATOR SIZE SELECTION -->
+                <div class="section-card">
+                  <div class="section-title">
+                    <img src="./img/sizing_section/ruler.png" alt="ruler icon" /> SEPARATOR SIZE
+                    SELECTION
+                  </div>
+                  <table class="data-table">
+                    <thead>
+                      <tr>
+                        <th>Case</th>
+                        <th>Diameter</th>
+                        <th>Length</th>
+                        <th>L/D Ratio</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Calculated values</td>
+                        <td>11.2 ft</td>
+                        <td>37.5 ft</td>
+                        <td>3.35</td>
+                        <td><span class="badge badge-preferred">PREFERRED</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- SECTION 5: SEPARATOR SIZE SELECTION -->
+
+                <!-- SECTION 6: FINAL RECOMMENDATION -->
+                <div class="final-card">
+                  <div class="section-title" style="margin-bottom: 14px">
+                    <img
+                      src="./img/sizing_section/free-icon-star-web-8564255.png"
+                      alt="star icon"
+                    />
+                    FINAL RECOMMENDATION
+                  </div>
+                  <div class="final-grid">
+                    <div class="final-item">
+                      <div class="final-label">Recommended Diameter</div>
+                      <div class="final-value">11.2 <span style="font-size: 18px">ft</span></div>
+                    </div>
+                    <div class="final-item">
+                      <div class="final-label">Recommended Length</div>
+                      <div class="final-value">37.5 <span style="font-size: 18px">ft</span></div>
+                    </div>
+                    <div class="final-item">
+                      <div class="final-label">Slenderness Ratio</div>
+                      <div class="final-value">3.35</div>
+                    </div>
+                    <div class="final-item" style="text-align: center">
+                      <div class="final-label">Final Status</div>
+                      <span
+                        class="badge badge-acceptable"
+                        style="font-size: 13px; padding: 8px 16px"
+                        >ACCEPTABLE</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- SECTION 6: FINAL RECOMMENDATION -->
               </div>
               <!-- FACTOR CONTENT -->
             </form>
@@ -535,21 +803,18 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-      <div class="container">
-        <div class="footer__inner">
-          <!-- LOGO -->
-          <div class="header__inner-logo">
-            <img src="./img/logo.png" alt="logotype" />
-          </div>
-          <!-- LOGO -->
-
-          <!-- TITLE -->
-          <div class="header__inner-title">
-            <h2>SepSize</h2>
-            <h3>Multiphase Separator Sizing Tool</h3>
-          </div>
-          <!-- TITLE -->
+      <div class="footer__inner">
+        <!-- LOGO -->
+        <div class="header__inner-logo">
+          <button class="btn-cta btn-prev">← Back</button>
         </div>
+        <!-- LOGO -->
+
+        <!-- TITLE -->
+        <div class="header__inner-title">
+          <button class="btn-cta btn-next">Next step →</button>
+        </div>
+        <!-- TITLE -->
       </div>
     </footer>
     <!-- FOOTER -->

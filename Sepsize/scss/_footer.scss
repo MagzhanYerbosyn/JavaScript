@@ -2,19 +2,41 @@
 
 .footer {
   margin-top: 30px;
-  background-color: $header-bg;
+  padding: 22px 38px;
 
   &__inner {
+    background-color: $header-bg;
+    border: 1px solid $border-final;
+    border-radius: 10px;
+    padding: 20px 24px;
     color: $white;
-    @include flex(flex-start, center);
+    @include flex(space-between, center);
 
-    &-title {
-      h2 {
-        font-size: 20px;
+    .btn-cta {
+      color: $white;
+      border: 1px solid $border-card;
+      border-radius: 15px;
+      padding: 12px 22px;
+      font-size: 14px;
+      font-weight: 700;
+      font-family: inherit;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+
+      &:hover {
+        opacity: 0.8;
       }
-      h3 {
-        font-size: 12px;
-      }
+    }
+
+    .btn-prev {
+      background-color: $section-bg;
+    }
+
+    .btn-next {
+      background: $accent-yellow;
     }
   }
 }

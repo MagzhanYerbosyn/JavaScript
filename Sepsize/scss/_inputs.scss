@@ -1,6 +1,7 @@
 @use 'abstracts' as *;
 
 .inputs {
+  display: none;
   height: 633px;
   background-color: $section-bg;
   margin: 30px 0;
