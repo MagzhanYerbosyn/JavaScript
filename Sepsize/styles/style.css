@@ -304,16 +304,20 @@ ul {
 }
 .flash__inner-content .table__foot .card {
   padding: 16px;
-  background-color: #071726;
+  background: #122534;
+  border: 1px solid #1e2a38;
+  border-radius: 10px;
 }
 .flash__inner-content .table__foot .card h5 {
   font-size: 14px;
+  margin-bottom: 8px;
 }
 .flash__inner-content .table__foot .card span {
   font-size: 18px;
   color: #ffffff;
 }
 .flash__inner-content .table__foot .card p {
+  margin-top: 8px;
   font-size: 12px;
 }
 .flash__inner-btn input:hover {
